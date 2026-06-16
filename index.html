@@ -8,19 +8,25 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Bebas+Neue&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* ── DEEP BLUE + CYAN THEME — Friends Forever, Satara ── */
-  --bg:#060c14;--bg2:#0a1220;--bg3:#0d1628;--card:#101e30;--card2:#142438;
-  --border:rgba(56,189,248,.08);--border2:rgba(56,189,248,.14);
-  --orange:#0ea5e9;        /* primary accent = deep sky blue */
-  --orange2:#38bdf8;       /* lighter blue */
-  --gold:#06b6d4;          /* cyan — used for gold/highlights */
-  --silver:#94a3b8;--bronze:#7dd3fc;
-  --green:#22d3ee;         /* cyan-green */
-  --sky:#38bdf8;--red:#f43f5e;--purple:#818cf8;
-  --white:#f0f9ff;--muted:#2d4a6e;--text:#6b94c0;
-  --r:10px;--r2:16px;--r3:22px;
+  /* ── GLASSMORPHISM — Deep Blue + Cyan · Friends Forever, Satara ── */
+  --bg:#020818;--bg2:#040d24;--bg3:#060f2a;
+  --card:rgba(14,30,60,.55);--card2:rgba(20,42,80,.6);
+  --border:rgba(56,189,248,.12);--border2:rgba(56,189,248,.22);
+  --glass:rgba(255,255,255,.04);--glass2:rgba(255,255,255,.07);
+  --blur:blur(16px);--blur2:blur(24px);
+  /* Accents */
+  --orange:#0ea5e9;--orange2:#38bdf8;
+  --gold:#06b6d4;--silver:#94a3b8;--bronze:#7dd3fc;
+  --green:#22d3ee;--sky:#38bdf8;--red:#f43f5e;--purple:#818cf8;
+  --white:#f0f9ff;--muted:#1e3a5f;--text:#5b8ab0;
+  --r:12px;--r2:18px;--r3:24px;
+  /* Group colors */
   --g1:#0ea5e9;--g2:#06b6d4;--g3:#0284c7;--g4:#818cf8;
-  --g5:#f43f5e;--g6:#22d3ee;--g7:#0369a1;--g8:#334155;
+  --g5:#22d3ee;--g6:#334155;--g7:#0369a1;--g8:#0e4f6e;
+  /* Glow */
+  --glow-blue:0 0 24px rgba(14,165,233,.3);
+  --glow-cyan:0 0 24px rgba(6,182,212,.3);
+  --glow-sm:0 0 12px rgba(56,189,248,.2);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%;font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
@@ -734,6 +740,342 @@ input,textarea,select{font-family:inherit}
   font-style:italic;flex:1;
 }
 
+
+/* ═══════════════════════════════════════════════
+   GLASSMORPHISM OVERRIDES — Friends Forever Satara
+═══════════════════════════════════════════════ */
+
+/* Background — deep blue radial gradient */
+body{
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(14,165,233,.15) 0%,transparent 55%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(6,182,212,.12) 0%,transparent 55%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, #020818 0%,#010610 100%);
+}
+
+/* Glass card mixin — applied to all cards */
+.card,.stat-box,.champ-card,.group-block,
+.hero-right,.rank-item,.goal-card,.item-card,
+.wa-award-card,.week-nav,.day-nav,.faq-item,
+.ai-result,.upload-zone,.admin-lock,.banner-preview{
+  background:rgba(14,30,60,.45) !important;
+  backdrop-filter:blur(20px) !important;
+  -webkit-backdrop-filter:blur(20px) !important;
+  border:1px solid rgba(56,189,248,.14) !important;
+  box-shadow:0 8px 32px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+
+/* Topnav glass */
+.topnav{
+  background:rgba(2,8,24,.75) !important;
+  backdrop-filter:blur(28px) !important;
+  -webkit-backdrop-filter:blur(28px) !important;
+  border-bottom:1px solid rgba(56,189,248,.14) !important;
+  box-shadow:0 1px 0 rgba(56,189,248,.08),0 4px 24px rgba(0,0,0,.3) !important;
+}
+.tab-bar{
+  background:rgba(2,8,24,.88) !important;
+  backdrop-filter:blur(28px) !important;
+  -webkit-backdrop-filter:blur(28px) !important;
+  border-top:1px solid rgba(56,189,248,.14) !important;
+}
+
+/* Active nav — cyan glow */
+.nav-link.active{
+  color:var(--sky) !important;
+  background:rgba(56,189,248,.1) !important;
+  box-shadow:0 0 16px rgba(56,189,248,.15),inset 0 0 0 1px rgba(56,189,248,.2) !important;
+}
+.nav-link:hover{
+  background:rgba(56,189,248,.06) !important;
+  color:var(--white) !important;
+}
+.tab.active{color:var(--sky) !important}
+
+/* Nav logo gradient text */
+.nav-logo{
+  background:linear-gradient(135deg,#38bdf8,#06b6d4) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  background-clip:text !important;
+}
+.nav-day{
+  background:rgba(6,182,212,.1) !important;
+  border-color:rgba(6,182,212,.25) !important;
+  color:var(--cyan) !important;
+}
+
+/* Hero H1 — cyan gradient */
+.hero-h1 .n2{
+  background:linear-gradient(135deg,#38bdf8,#06b6d4,#0ea5e9) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  background-clip:text !important;
+  filter:none !important;
+  text-shadow:none !important;
+}
+.hero-h1 .n1,.hero-h1 .n3{color:#e0f2fe !important}
+
+/* Hero pill */
+.hero-pill{
+  background:rgba(6,182,212,.08) !important;
+  border-color:rgba(6,182,212,.3) !important;
+  color:var(--cyan2) !important;
+}
+.live-dot{background:#06b6d4 !important}
+@keyframes lp{
+  0%,100%{box-shadow:0 0 0 0 rgba(6,182,212,.6)}
+  50%{box-shadow:0 0 0 6px rgba(6,182,212,0)}
+}
+
+/* Hero sub & org */
+.hero-sub{color:#7dd3fc !important}
+.hero-org{color:rgba(125,211,252,.45) !important}
+
+/* Register button — cyan gradient */
+.btn-reg{
+  background:linear-gradient(135deg,#0ea5e9,#06b6d4) !important;
+  box-shadow:0 8px 28px rgba(14,165,233,.35),inset 0 1px 0 rgba(255,255,255,.15) !important;
+  color:#fff !important;
+}
+.btn-reg:hover{
+  box-shadow:0 12px 40px rgba(14,165,233,.55),inset 0 1px 0 rgba(255,255,255,.2) !important;
+  transform:translateY(-2px) !important;
+}
+
+/* Value pills — glass style */
+.vp{
+  background:rgba(56,189,248,.07) !important;
+  border-color:rgba(56,189,248,.18) !important;
+  color:#7dd3fc !important;
+}
+.act-pill{
+  background:rgba(6,182,212,.06) !important;
+  border-color:rgba(6,182,212,.18) !important;
+  color:#67e8f9 !important;
+}
+
+/* Stats */
+.stat-n{color:var(--sky) !important}
+.stat-box:hover{
+  border-color:rgba(56,189,248,.35) !important;
+  box-shadow:0 0 24px rgba(56,189,248,.15),0 8px 32px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+
+/* Champ card */
+.champ-card{
+  background:linear-gradient(135deg,rgba(6,182,212,.12),rgba(14,165,233,.06)) !important;
+  border-color:rgba(56,189,248,.22) !important;
+}
+.champ-km-n{color:var(--cyan) !important}
+.champ-tag{color:var(--sky) !important}
+
+/* Section dividers */
+.divider-label{color:rgba(56,189,248,.6) !important}
+.divider-label::after{background:rgba(56,189,248,.15) !important}
+.sec-label{color:var(--cyan) !important}
+.sec-title span{color:var(--sky) !important}
+
+/* Rank items */
+.rank-item:hover{
+  background:rgba(56,189,248,.05) !important;
+  border-color:rgba(56,189,248,.25) !important;
+}
+.rank-km{color:var(--cyan2) !important}
+.rank-num.r1{color:var(--gold) !important}
+
+/* Podium */
+.pod-card.g{
+  background:linear-gradient(180deg,rgba(6,182,212,.16),rgba(6,182,212,.05)) !important;
+  border-color:rgba(6,182,212,.35) !important;
+}
+.pod-km.g{
+  color:var(--gold) !important;
+  text-shadow:0 0 16px rgba(6,182,212,.5) !important;
+}
+.pod-rank.g{
+  background:linear-gradient(135deg,#06b6d4,#0ea5e9) !important;
+  color:#fff !important;
+  box-shadow:0 0 14px rgba(6,182,212,.4) !important;
+}
+.pod-av.g{
+  border-color:var(--gold) !important;
+  box-shadow:0 0 14px rgba(6,182,212,.3) !important;
+}
+
+/* Progress bar */
+.progress-fill{
+  background:linear-gradient(90deg,#0ea5e9,#06b6d4,#67e8f9) !important;
+}
+.progress-bar{
+  background:rgba(56,189,248,.06) !important;
+}
+
+/* Cat tabs */
+.cat-tab.aw{border-color:var(--green) !important;color:var(--green) !important}
+.cat-tab.ar{border-color:var(--orange) !important;color:var(--orange) !important}
+.cat-tab.ac{border-color:var(--sky) !important;color:var(--sky) !important}
+
+/* Day nav */
+.day-nav{border-color:rgba(56,189,248,.18) !important}
+.day-nav-btn:hover:not(:disabled){
+  background:rgba(56,189,248,.12) !important;
+  color:var(--sky) !important;
+}
+.week-nav{border-color:rgba(56,189,248,.18) !important}
+.week-nav-btn:hover:not(:disabled){
+  background:rgba(56,189,248,.12) !important;
+  color:var(--sky) !important;
+}
+
+/* Group blocks */
+.mc.done{
+  border-color:rgba(34,211,238,.45) !important;
+  background:rgba(34,211,238,.06) !important;
+}
+.mc.extra{border-color:var(--gold) !important}
+
+/* Form focus */
+.fi:focus,.fta:focus{
+  border-color:var(--sky) !important;
+  box-shadow:0 0 0 3px rgba(56,189,248,.12) !important;
+}
+.fi,.fta{
+  background:rgba(6,20,50,.6) !important;
+  border-color:rgba(56,189,248,.12) !important;
+}
+
+/* Buttons */
+.btn-sub,.btn-scan{
+  background:linear-gradient(135deg,#0ea5e9,#06b6d4) !important;
+  box-shadow:0 6px 20px rgba(14,165,233,.28) !important;
+}
+.btn-sub:hover,.btn-scan:hover{
+  box-shadow:0 10px 28px rgba(14,165,233,.45) !important;
+}
+.btn-refresh{
+  background:rgba(56,189,248,.08) !important;
+  border-color:rgba(56,189,248,.22) !important;
+  color:var(--sky) !important;
+}
+.btn-refresh:hover{background:rgba(56,189,248,.16) !important}
+.btn-share{
+  background:rgba(34,211,238,.08) !important;
+  border-color:rgba(34,211,238,.25) !important;
+  color:var(--green) !important;
+}
+.btn-save-banner{
+  background:linear-gradient(135deg,#0ea5e9,#06b6d4) !important;
+}
+
+/* WA row */
+.wa-row{
+  background:rgba(34,211,238,.05) !important;
+  border-color:rgba(34,211,238,.18) !important;
+}
+.wa-t{color:var(--green) !important}
+
+/* Admin section */
+.admin-section-hdr{color:var(--sky) !important}
+.toggle-sw input:checked + .toggle-sl{background:var(--sky) !important}
+
+/* FAQ */
+.faq-q:hover{color:var(--sky) !important}
+.faq-item.open .faq-ico{background:var(--sky) !important}
+
+/* Goal/tip cards hover */
+.item-card:hover{border-color:rgba(56,189,248,.3) !important}
+.item-card::before{
+  background:radial-gradient(circle at 50% 0%,rgba(56,189,248,.07),transparent 70%) !important;
+}
+
+/* Tracker modal */
+.tracker-modal{
+  background:rgba(4,15,40,.82) !important;
+  backdrop-filter:blur(28px) !important;
+  -webkit-backdrop-filter:blur(28px) !important;
+  border-color:rgba(56,189,248,.2) !important;
+}
+.tm-close:hover{
+  background:rgba(56,189,248,.12) !important;
+  color:var(--sky) !important;
+}
+
+/* Upload zone */
+.upload-zone:hover,.upload-zone.drag{
+  border-color:var(--sky) !important;
+  background:rgba(56,189,248,.05) !important;
+}
+
+/* Sub status */
+.sub-status.ok{
+  background:rgba(34,211,238,.08) !important;
+  border-color:rgba(34,211,238,.25) !important;
+  color:var(--green) !important;
+}
+.sub-status.loading{
+  background:rgba(56,189,248,.08) !important;
+  border-color:rgba(56,189,248,.2) !important;
+  color:var(--sky) !important;
+}
+
+/* Admin tabs */
+.admin-tab.active{
+  color:var(--sky) !important;
+  background:rgba(56,189,248,.1) !important;
+  border-color:rgba(56,189,248,.28) !important;
+}
+
+/* Card2 */
+.card2,.ai-result,.banner-preview,.group-block{
+  background:rgba(10,25,60,.5) !important;
+}
+
+/* Nd-drop */
+.nd-drop,.nd-item:hover{
+  background:rgba(4,15,45,.92) !important;
+}
+.nd-item:hover{background:rgba(56,189,248,.1) !important}
+
+/* Weekly awards */
+.wa-card.wac-gold{
+  border-color:rgba(6,182,212,.3) !important;
+  background:rgba(6,182,212,.06) !important;
+}
+.wa-card.wac-green{
+  border-color:rgba(34,211,238,.3) !important;
+  background:rgba(34,211,238,.06) !important;
+}
+.wa-card.wac-orange{
+  border-color:rgba(14,165,233,.3) !important;
+  background:rgba(14,165,233,.06) !important;
+}
+
+/* Hero right card — glass */
+.hero-right{
+  background:rgba(8,24,56,.5) !important;
+  backdrop-filter:blur(24px) !important;
+  -webkit-backdrop-filter:blur(24px) !important;
+  border-color:rgba(56,189,248,.18) !important;
+  box-shadow:0 8px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(56,189,248,.08) !important;
+}
+
+/* CS rows */
+.cs-val.or{color:var(--sky) !important}
+.cs-val.sk{color:var(--cyan2) !important}
+.cs-val.gr{color:var(--green) !important}
+
+/* Banner */
+.motiv-banner{
+  border-color:rgba(56,189,248,.25) !important;
+}
+
+/* Nameplate in tracker */
+.nameplate{
+  background:linear-gradient(180deg,rgba(4,20,50,.9) 0%,rgba(2,10,30,.95) 100%) !important;
+  border-color:rgba(56,189,248,.35) !important;
+}
+
 </style>
 </head>
 <body>
@@ -796,7 +1138,7 @@ input,textarea,select{font-family:inherit}
           <span class="vp">✅ Group Motivation</span>
         </div>
         <div style="display:flex;flex-direction:column;align-items:center">
-          <button id="reg-btn" class="btn-reg" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdY91lYQoPHhXdzPybz9tkPuYIbuo5faE29KEdCHYfI0Mtqrg/viewform?usp=dialog','_blank')">🎯 Register Now — Free</button>
+          <button id="reg-btn" class="btn-reg" onclick="window.open('https://forms.gle/41Y588DrnkZCukr68','_blank')">🎯 Register Now</button>
           <p class="reg-note" id="reg-note">Registration open until 18 June 2026 · Age 14+</p>
         </div>
       </div>
@@ -1262,6 +1604,7 @@ input,textarea,select{font-family:inherit}
 </div>
 
 <script>
+
 /* ══ CONFIG ══ */
 const APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbwpZeX4SPx-Tr5aIEo0gQVVfcAQ5iNkj2wcNMTLyaPqXTb_tLWZehQOPquiQ3EaUYGmUA/exec'; // ← Deploy new Apps Script for Satara sheet
 const MY_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vTRjK_L00prnTzDPdREeKrfFHu0d-gIc2Gt1MYQoTRepZGHyeZO9sVCqWcS4yjGc4dNW4UWZ7bKdUyw/pub?output=csv'; // ← Publish activityTracker-STR sheet as CSV and paste URL here
