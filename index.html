@@ -37,7 +37,7 @@ input,textarea,select{font-family:inherit}
 /* TOP NAV */
 .topnav{
   position:sticky;top:0;z-index:200;height:64px;
-  background:rgba(8,12,18,.96);backdrop-filter:blur(20px);
+  background:#0e0800;
   border-bottom:1px solid var(--border);
   display:flex;align-items:center;padding:0 2rem;gap:1.5rem;
 }
@@ -67,7 +67,7 @@ input,textarea,select{font-family:inherit}
 @media(max-width:768px){
   .topnav{display:none}
   .page{padding:1rem 1rem calc(68px + env(safe-area-inset-bottom))}
-  .tab-bar{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;bottom:0;left:0;right:0;z-index:200;height:calc(58px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);background:rgba(8,12,18,.98);backdrop-filter:blur(16px);border-top:1px solid var(--border)}
+  .tab-bar{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;bottom:0;left:0;right:0;z-index:200;height:calc(58px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);background:rgba(8,12,18,.98);border-top:1px solid var(--border)}
   .tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--muted);font-size:.55rem;font-weight:600;letter-spacing:.4px;text-transform:uppercase;-webkit-tap-highlight-color:transparent;transition:color .15s}
   .tab.active{color:var(--orange)}
   .tab-icon{font-size:1.2rem;line-height:1}
@@ -858,6 +858,26 @@ body{
 /* Group colors update */
 .nav-day{color:var(--orange)!important}
 
+
+/* ── CLEAN SOLID THEME — no glass effects ── */
+.card,.stat-box,.champ-card,.group-block,
+.hero-right,.rank-item,.goal-card,.item-card,
+.wa-award-card,.week-nav,.day-nav,.faq-item{
+  background:var(--card) !important;
+  border:1px solid var(--border) !important;
+  box-shadow:0 4px 16px rgba(0,0,0,.3) !important;
+  backdrop-filter:none !important;
+}
+.topnav{
+  background:#0e0800 !important;
+  border-bottom:1px solid rgba(249,115,22,.12) !important;
+  box-shadow:0 2px 12px rgba(0,0,0,.3) !important;
+}
+.tab-bar{
+  background:#0e0800 !important;
+  border-top:1px solid rgba(249,115,22,.1) !important;
+}
+
 </style>
 </head>
 <body>
@@ -1388,7 +1408,7 @@ body{
 <script>
 /* ══ CONFIG ══ */
 const APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbwpZeX4SPx-Tr5aIEo0gQVVfcAQ5iNkj2wcNMTLyaPqXTb_tLWZehQOPquiQ3EaUYGmUA/exec'; // ← Deploy new Apps Script for Satara sheet
-const MY_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vTRjK_L00prnTzDPdREeKrfFHu0d-gIc2Gt1MYQoTRepZGHyeZO9sVCqWcS4yjGc4dNW4UWZ7bKdUyw/pub?output=csv'; // ← Publish activityTracker-STR sheet as CSV and paste URL here
+const MY_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vTRjK_L00prnTzDPdREeKrfFHu0d-gIc2Gt1MYQoTRepZGHyeZO9sVCqWcS4yjGc4dNW4UWZ7bKdUyw/pub?gid=319512187&single=true&output=csv'; // ← Publish activityTracker-STR sheet as CSV and paste URL here
 const FRIEND_CSV='';
 const ADMIN_PIN='1001'; // ← change this to your preferred 4-digit PIN
 
