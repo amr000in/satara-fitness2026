@@ -362,8 +362,8 @@ input,textarea,select{font-family:inherit}
 .rank-num.r1{color:var(--gold)}.rank-num.r2{color:var(--silver)}.rank-num.r3{color:var(--bronze)}
 .rank-av{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0}
 .rank-info{flex:1;min-width:0}
-.rank-name{font-weight:600;font-size:.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.rank-sub{font-size:.62rem;color:var(--muted);margin-top:.04rem}
+.rank-name{font-weight:700;font-size:.88rem;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-sub{font-size:.62rem;color:rgba(255,255,255,.38);margin-top:.04rem}
 .rank-sub .days-zero{color:var(--text);opacity:.55}
 .rank-km{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;color:var(--sky);line-height:1;text-align:right;flex-shrink:0}
 .rank-km small{font-family:'DM Sans',sans-serif;font-size:.52rem;color:var(--muted)}
@@ -811,7 +811,7 @@ input,textarea,select{font-family:inherit}
         <div class="cs-row"><span class="cs-label">Duration</span><span class="cs-val or">100 Days</span></div>
         <div class="cs-row"><span class="cs-label">Start</span><span class="cs-val">18 June 2026</span></div>
         <div class="cs-row"><span class="cs-label">End</span><span class="cs-val">26 September 2026</span></div>
-        <div class="cs-row"><span class="cs-label">Members</span><span class="cs-val gr" id="hero-members">24</span></div>
+        <div class="cs-row"><span class="cs-label">Members</span><span class="cs-val gr" id="hero-members">18</span></div>
         <div class="cs-row"><span class="cs-label">Total KM</span><span class="cs-val sk" id="hero-km">0</span></div>
         <div class="cs-row"><span class="cs-label">Today</span><span class="cs-val or" id="hero-today">0 logged</span></div>
         <div class="sec-label" style="margin:.8rem 0 .4rem">Progress</div>
@@ -1264,30 +1264,30 @@ input,textarea,select{font-family:inherit}
 <script>
 /* ══ CONFIG ══ */
 const APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbwpZeX4SPx-Tr5aIEo0gQVVfcAQ5iNkj2wcNMTLyaPqXTb_tLWZehQOPquiQ3EaUYGmUA/exec'; // ← Deploy new Apps Script for Satara sheet
-const MY_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vTRjK_L00prnTzDPdREeKrfFHu0d-gIc2Gt1MYQoTRepZGHyeZO9sVCqWcS4yjGc4dNW4UWZ7bKdUyw/pub?gid=319512187&single=true&output=csv'; // ← Publish activityTracker-STR sheet as CSV and paste URL here
+const MY_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vTRjK_L00prnTzDPdREeKrfFHu0d-gIc2Gt1MYQoTRepZGHyeZO9sVCqWcS4yjGc4dNW4UWZ7bKdUyw/pub?gid=1206976747&single=true&output=csv'; // ← Publish activityTracker-STR sheet as CSV and paste URL here
 const FRIEND_CSV='';
 const ADMIN_PIN='1001'; // ← change this to your preferred 4-digit PIN
 
 /* ══ GROUPS ══ */
 const GROUPS=[
   {id:'g1',name:'Group 1',color:'#f97316',emoji:'🔥',
-   members:['Mukund Dagadu Navale','Amar Shinde','Arati Mukund Navale','Harshvardhan Pravin Gujar',],
-   flow:'Mukund → Amar → Arati → Harshvardhan → Mukund'},
+   members:['Mukund Dagadu Navale','Chitrani Mukund Navale','Arati Mukund Navale','Pruthviraj Narayan Navale','Mohan Baban Gole'],
+   flow:'Mukund → Chitrani → Arati → Pruthviraj → Mohan → Mukund'},
   {id:'g2',name:'Group 2',color:'#f59e0b',emoji:'⚡',
-   members:['Ritambhara A Shinde','Pravin Parshuram Gujar','Pruthviraj Narayan Navale','Deepali Mohan Gole'],
-   flow:'Ritambhara → Pravin → Harshvardhan → Deepali → ritambhara'},
+   members:['Sheetal Pravin Gujar','Pravin Parshuram Gujar','Harshvardhan Pravin Gujar','Deepali Mohan Gole'],
+   flow:'Sheetal → Pravin → Harshvardhan → Deepali → Sheetal'},
   {id:'g3',name:'Group 3',color:'#ef4444',emoji:'🏃',
-   members:['Anil Laxman Phadatare','Saksham Anil Phadatare','Nilesh Baban Tate','Krishna Shinde'],
-   flow:'Anil → Saksham → Nilesh → Krishna → Anil'},
+   members:['Anil Laxman Phadatare','Saksham Anil Phadatare','Rupali Anil Phadatare','Nilesh Baban Tate'],
+   flow:'Anil → Saksham → Rupali → Nilesh → Anil'},
   {id:'g4',name:'Group 4',color:'#a78bfa',emoji:'💜',
-   members:['Aparna Shinde','Pratibha Raviraj Bhosale','Sonali Gulab Shinde','Rupali Anil Phadatare'],
-   flow:'Aparna → Pratibha → Sonali → Rupali → Aparna'},
+   members:['Aparna Shinde','Amar Shinde','Sonali Gulab Shinde','Krishna Shinde'],
+   flow:'Aparna → Amar → Sonali → Krishna → Aparna'},
   {id:'g5',name:'Group 5',color:'#22c55e',emoji:'🌟',
-   members:['Umesh Bansode','Sandeep Pawar','Chitrani Mukund Navale','Sambhaji Sanjay Patil'],
-   flow:'Umesh → Sandeep → Chitrani → Sambhaji → Umesh'},
+   members:['Umesh Bansode','Dhruv Umesh Bansode','Sandeep Pawar','Pratibha Raviraj Bhosale','Sambhaji Sanjay Patil'],
+   flow:'Umesh → Dhruv → Sandeep → Pratibha → Sambhaji → Umesh'},
   {id:'g6',name:'Group 6',color:'#64748b',emoji:'⬛',
-   members:['Mukund Hanmant Londhe','Mohan Baban Gole','Sheetal Pravin Gujar','Dhruv Umesh Bansode'],
-   flow:'Mukund → Mohan → Sheetal → Dhruv → Mukund'},
+   members:['Mukund Hanmant Londhe'],
+   flow:'Coming Soon — New Members'},
 ];
 const ALL_MEMBERS=[...new Set(GROUPS.flatMap(g=>g.members))];
 
@@ -1316,7 +1316,6 @@ const EMAILS={
   'Sambhaji Sanjay Patil':'pratikpatil9853@gmail.com',
   'Krishna Shinde':'krisha.shinde@outlook.com',
   'Dhruv Umesh Bansode':'dhruvbansode5@gmail.com',
-  'Ritambhara A Shinde':'ritambhara.shinde@gmail.com'
 };
 
 /* ══ MEMBER GROUP LOOKUP ══ */
@@ -1590,7 +1589,7 @@ function renderAll(rows){
   // board stats
   document.getElementById('lb-km').textContent=totalKm.toFixed(1);
   document.getElementById('lb-logs').textContent=rows.length;
-  document.getElementById('lb-p').textContent=24;
+  document.getElementById('lb-p').textContent=23;
   // champ
   if(todayRows.length){
     const best=[...todayRows].sort((a,b)=>b.km-a.km)[0];
