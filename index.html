@@ -1268,26 +1268,27 @@ const MY_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vTRjK_L00prnTzDPdR
 const FRIEND_CSV='';
 const ADMIN_PIN='1001'; // ← change this to your preferred 4-digit PIN
 
+
 /* ══ GROUPS ══ */
 const GROUPS=[
   {id:'g1',name:'Group 1',color:'#f97316',emoji:'🔥',
-   members:['Mukund Dagadu Navale','Chitrani Mukund Navale','Arati Mukund Navale','Pruthviraj Narayan Navale','Mohan Baban Gole'],
-   flow:'Mukund → Chitrani → Arati → Pruthviraj → Mohan → Mukund'},
+   members:['Mukund Dagadu Navale','Amar Shinde','Arati Mukund Navale','Harshvardhan Pravin Gujar',],
+   flow:'Mukund → Amar → Arati → Harshvardhan → Mukund'},
   {id:'g2',name:'Group 2',color:'#f59e0b',emoji:'⚡',
-   members:['Sheetal Pravin Gujar','Pravin Parshuram Gujar','Harshvardhan Pravin Gujar','Deepali Mohan Gole'],
-   flow:'Sheetal → Pravin → Harshvardhan → Deepali → Sheetal'},
+   members:['Ritambhara A Shinde','Pravin Parshuram Gujar','Pruthviraj Narayan Navale','Deepali Mohan Gole'],
+   flow:'Ritambhara → Pravin → Harshvardhan → Deepali → ritambhara'},
   {id:'g3',name:'Group 3',color:'#ef4444',emoji:'🏃',
-   members:['Anil Laxman Phadatare','Saksham Anil Phadatare','Rupali Anil Phadatare','Nilesh Baban Tate'],
-   flow:'Anil → Saksham → Rupali → Nilesh → Anil'},
+   members:['Anil Laxman Phadatare','Saksham Anil Phadatare','Nilesh Baban Tate','Krishna Shinde','Sandeep phadke'],
+   flow:'Anil → Saksham → Nilesh → Krishna → Sandeep  → Anil'},
   {id:'g4',name:'Group 4',color:'#a78bfa',emoji:'💜',
-   members:['Aparna Shinde','Amar Shinde','Sonali Gulab Shinde','Krishna Shinde'],
-   flow:'Aparna → Amar → Sonali → Krishna → Aparna'},
+   members:['Aparna Shinde','Pratibha Raviraj Bhosale','Sonali Gulab Shinde','Rupali Anil Phadatare'],
+   flow:'Aparna → Pratibha → Sonali → Rupali → Aparna'},
   {id:'g5',name:'Group 5',color:'#22c55e',emoji:'🌟',
-   members:['Umesh Bansode','Dhruv Umesh Bansode','Sandeep Pawar','Pratibha Raviraj Bhosale','Sambhaji Sanjay Patil'],
-   flow:'Umesh → Dhruv → Sandeep → Pratibha → Sambhaji → Umesh'},
+   members:['Umesh Bansode','Sandeep Pawar','Chitrani Mukund Navale','Sambhaji Sanjay Patil', 'Vaishnavi Shinde'],
+   flow:'Umesh → Sandeep → Chitrani → Sambhaji → Vaishnavi → Umesh'},
   {id:'g6',name:'Group 6',color:'#64748b',emoji:'⬛',
-   members:['Mukund Hanmant Londhe'],
-   flow:'Coming Soon — New Members'},
+   members:['Mukund Hanmant Londhe','Mohan Baban Gole','Sheetal Pravin Gujar','Dhruv Umesh Bansode'],
+   flow:'Mukund → Mohan → Sheetal → Dhruv → Mukund'},
 ];
 const ALL_MEMBERS=[...new Set(GROUPS.flatMap(g=>g.members))];
 
@@ -1316,6 +1317,9 @@ const EMAILS={
   'Sambhaji Sanjay Patil':'pratikpatil9853@gmail.com',
   'Krishna Shinde':'krisha.shinde@outlook.com',
   'Dhruv Umesh Bansode':'dhruvbansode5@gmail.com',
+  'Ritambhara A Shinde':'ritambhara.shinde@gmail.com',
+  'Vaishnavi Shinde':'vaishnavi.shinde@gmail.com',
+  'Sandeep phadke':'sandeep.phadke23@gmail.com',
 };
 
 /* ══ MEMBER GROUP LOOKUP ══ */
