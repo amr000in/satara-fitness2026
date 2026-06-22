@@ -734,6 +734,173 @@ input,textarea,select{font-family:inherit}
 
 
 
+
+/* ══════════════════════════════════════════
+   LIGHT THEME — Strava-inspired clean style
+══════════════════════════════════════════ */
+[data-theme="light"]{
+  --bg:#f8f7f4;
+  --bg2:#ffffff;
+  --bg3:#f2f1ee;
+  --card:#ffffff;
+  --card2:#f5f4f1;
+  --border:rgba(0,0,0,.08);
+  --border2:rgba(0,0,0,.12);
+  --orange:#e8590c;
+  --gold:#d97706;
+  --silver:#6b7280;
+  --bronze:#92400e;
+  --green:#16a34a;
+  --sky:#0284c7;
+  --red:#dc2626;
+  --purple:#7c3aed;
+  --white:#111111;
+  --muted:#9ca3af;
+  --text:#4b5563;
+}
+[data-theme="light"] body{
+  background:#f8f7f4;
+  color:#111111;
+}
+[data-theme="light"] .topnav{
+  background:#ffffff !important;
+  border-bottom:1px solid rgba(0,0,0,.08) !important;
+  box-shadow:0 1px 8px rgba(0,0,0,.08) !important;
+}
+[data-theme="light"] .tab-bar{
+  background:#ffffff !important;
+  border-top:1px solid rgba(0,0,0,.08) !important;
+  box-shadow:0 -1px 8px rgba(0,0,0,.06) !important;
+}
+[data-theme="light"] .nav-link{color:#4b5563 !important}
+[data-theme="light"] .nav-link.active{
+  color:var(--orange) !important;
+  background:rgba(232,89,12,.08) !important;
+}
+[data-theme="light"] .nav-logo{color:var(--orange) !important}
+[data-theme="light"] .card,
+[data-theme="light"] .stat-box,
+[data-theme="light"] .rank-item,
+[data-theme="light"] .group-block,
+[data-theme="light"] .faq-item,
+[data-theme="light"] .hero-right,
+[data-theme="light"] .wa-award-card,
+[data-theme="light"] .item-card{
+  background:#ffffff !important;
+  border-color:rgba(0,0,0,.08) !important;
+  box-shadow:0 2px 12px rgba(0,0,0,.06) !important;
+}
+[data-theme="light"] .card2,
+[data-theme="light"] .ai-result,
+[data-theme="light"] .nd-drop{
+  background:#f5f4f1 !important;
+  border-color:rgba(0,0,0,.1) !important;
+}
+[data-theme="light"] .hero-h1 .n1,
+[data-theme="light"] .hero-h1 .n3{color:#111111 !important}
+[data-theme="light"] .hero-sub{color:#4b5563 !important}
+[data-theme="light"] .stat-n{color:var(--orange) !important}
+[data-theme="light"] .stat-l{color:#6b7280 !important}
+[data-theme="light"] .rank-name{color:#111111 !important}
+[data-theme="light"] .rank-sub{color:#9ca3af !important}
+[data-theme="light"] .rank-km{color:var(--orange) !important}
+[data-theme="light"] .rank-item:hover{background:#f8f7f4 !important}
+[data-theme="light"] .fi,
+[data-theme="light"] .fta{
+  background:#f5f4f1 !important;
+  border-color:rgba(0,0,0,.12) !important;
+  color:#111111 !important;
+}
+[data-theme="light"] .fi:focus,
+[data-theme="light"] .fta:focus{
+  border-color:var(--orange) !important;
+  box-shadow:0 0 0 3px rgba(232,89,12,.1) !important;
+  background:#ffffff !important;
+}
+[data-theme="light"] .nd-item{
+  color:#111111 !important;
+  border-bottom-color:rgba(0,0,0,.06) !important;
+}
+[data-theme="light"] .nd-item:hover{background:rgba(232,89,12,.06) !important}
+[data-theme="light"] .nd-grp{color:#9ca3af !important}
+[data-theme="light"] .champ-card{
+  background:linear-gradient(135deg,rgba(232,89,12,.08),rgba(217,119,6,.04)) !important;
+  border-color:rgba(232,89,12,.2) !important;
+}
+[data-theme="light"] .mc{
+  background:#f5f4f1 !important;
+  border-color:rgba(0,0,0,.08) !important;
+}
+[data-theme="light"] .mc.done{
+  background:rgba(22,163,74,.06) !important;
+  border-color:rgba(22,163,74,.3) !important;
+}
+[data-theme="light"] .mc-name{color:#111111 !important}
+[data-theme="light"] .mc-km{color:var(--orange) !important}
+[data-theme="light"] .mc-act{color:#6b7280 !important}
+[data-theme="light"] .prog-wrap{background:rgba(0,0,0,.06) !important}
+[data-theme="light"] .day-nav,
+[data-theme="light"] .week-nav{
+  background:#f5f4f1 !important;
+  border-color:rgba(0,0,0,.08) !important;
+}
+[data-theme="light"] .day-nav-btn,
+[data-theme="light"] .week-nav-btn{color:#4b5563 !important}
+[data-theme="light"] .day-nav-date{color:#111111 !important}
+[data-theme="light"] .day-nav-day{color:#9ca3af !important}
+[data-theme="light"] .section-hdr,
+[data-theme="light"] .sec-title{color:#111111 !important}
+[data-theme="light"] .sec-label{color:var(--orange) !important}
+[data-theme="light"] .divider-label{color:rgba(232,89,12,.7) !important}
+[data-theme="light"] .pod-card.g{
+  background:linear-gradient(180deg,rgba(217,119,6,.12),rgba(217,119,6,.04)) !important;
+  border-color:rgba(217,119,6,.3) !important;
+}
+[data-theme="light"] .pod-name{color:#111111 !important}
+[data-theme="light"] .progress-bar{background:rgba(0,0,0,.08) !important}
+[data-theme="light"] .faq-item{border-color:rgba(0,0,0,.08) !important}
+[data-theme="light"] .faq-q{color:#111111 !important}
+[data-theme="light"] .faq-a{color:#4b5563 !important}
+[data-theme="light"] .tracker-modal{
+  background:#ffffff !important;
+  border-color:rgba(0,0,0,.12) !important;
+}
+[data-theme="light"] .tm-name{color:#111111 !important}
+[data-theme="light"] .tm-group{color:#9ca3af !important}
+[data-theme="light"] .tm-day-act{color:#111111 !important}
+[data-theme="light"] .tm-day-row.active-day{background:rgba(22,163,74,.05) !important}
+[data-theme="light"] .tm-day-row.missed-day{opacity:.4}
+[data-theme="light"] .admin-lock{
+  background:#ffffff !important;
+  border-color:rgba(0,0,0,.1) !important;
+}
+[data-theme="light"] .lock-title{color:#111111 !important}
+
+/* Theme toggle button */
+.theme-toggle{
+  position:fixed;
+  right:1rem;
+  bottom:5.5rem;
+  width:42px;height:42px;
+  border-radius:50%;
+  background:var(--card);
+  border:1.5px solid var(--border2);
+  box-shadow:0 4px 16px rgba(0,0,0,.25);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:998;
+  font-size:1.1rem;
+  transition:all .2s;
+}
+.theme-toggle:hover{
+  transform:scale(1.1);
+  box-shadow:0 6px 20px rgba(0,0,0,.3);
+}
+[data-theme="light"] .theme-toggle{
+  background:#ffffff;
+  border-color:rgba(0,0,0,.12);
+  box-shadow:0 4px 16px rgba(0,0,0,.12);
+}
+
 </style>
 </head>
 <body>
@@ -811,7 +978,7 @@ input,textarea,select{font-family:inherit}
         <div class="cs-row"><span class="cs-label">Duration</span><span class="cs-val or">100 Days</span></div>
         <div class="cs-row"><span class="cs-label">Start</span><span class="cs-val">18 June 2026</span></div>
         <div class="cs-row"><span class="cs-label">End</span><span class="cs-val">26 September 2026</span></div>
-        <div class="cs-row"><span class="cs-label">Members</span><span class="cs-val gr" id="hero-members">18</span></div>
+        <div class="cs-row"><span class="cs-label">Members</span><span class="cs-val gr" id="hero-members">27</span></div>
         <div class="cs-row"><span class="cs-label">Total KM</span><span class="cs-val sk" id="hero-km">0</span></div>
         <div class="cs-row"><span class="cs-label">Today</span><span class="cs-val or" id="hero-today">0 logged</span></div>
         <div class="sec-label" style="margin:.8rem 0 .4rem">Progress</div>
@@ -1594,7 +1761,7 @@ function renderAll(rows){
   // board stats
   document.getElementById('lb-km').textContent=totalKm.toFixed(1);
   document.getElementById('lb-logs').textContent=rows.length;
-  document.getElementById('lb-p').textContent=24;
+  document.getElementById('lb-p').textContent=27;
   // champ
   if(todayRows.length){
     const best=[...todayRows].sort((a,b)=>b.km-a.km)[0];
@@ -2473,8 +2640,10 @@ function openTracker(memberName){
   if(!overlay) return;
 
   // Get member data from allRows
+  // Filter rows for this member — match name case-insensitively
   var memberRows = allRows.filter(function(r){
-    return r.name && r.name.toLowerCase().trim() === memberName.toLowerCase().trim() && r.km > 0;
+    if(!r.name || r.km <= 0) return false;
+    return r.name.toLowerCase().trim() === memberName.toLowerCase().trim();
   });
 
   // Get group info
@@ -2626,7 +2795,37 @@ document.addEventListener('DOMContentLoaded',()=>{
   loadBanner();
   renderWeeklyAwards();
   fetchData(false);
+
+/* ══ THEME TOGGLE ══ */
+function toggleTheme(){
+  var root = document.documentElement;
+  var btn  = document.getElementById('theme-btn');
+  var current = root.getAttribute('data-theme');
+  if(current === 'light'){
+    root.removeAttribute('data-theme');
+    btn.textContent = '🌙';
+    localStorage.setItem('satara_theme','dark');
+  } else {
+    root.setAttribute('data-theme','light');
+    btn.textContent = '☀️';
+    localStorage.setItem('satara_theme','light');
+  }
+}
+// Restore saved theme on load
+(function(){
+  var saved = localStorage.getItem('satara_theme');
+  if(saved === 'light'){
+    document.documentElement.setAttribute('data-theme','light');
+    var btn = document.getElementById('theme-btn');
+    if(btn) btn.textContent = '☀️';
+  }
+})();
+
 });
 </script>
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle light/dark theme">🌙</button>
+
 </body>
 </html>
