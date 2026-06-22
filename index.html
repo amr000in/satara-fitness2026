@@ -1709,8 +1709,27 @@ function changeDay(dir){
 function isoDate(str){
   if(!str) return '';
   try{
-    if(str.includes('/')){const p=str.split('/');if(p.length===3){if(p[2].length===4)return `${p[2]}-${p[1].padStart(2,'0')}-${p[0].padStart(2,'0')}`;return `${p[2]}-${p[0].padStart(2,'0')}-${p[1].padStart(2,'0')}`;}}
-    const d=new Date(str);if(!isNaN(d))return d.toISOString().slice(0,10);
+    str = String(str).trim();
+    // YYYY-MM-DD — return directly (no timezone risk)
+    if(/^\d{4}-\d{2}-\d{2}$/.test(str)) return str;
+    // Slash formats
+    if(str.includes('/')){
+      const p=str.split('/');
+      if(p.length>=3){
+        const y=p.find(x=>x.length===4)||p[2];
+        const rest=p.filter(x=>x!==y);
+        // DD/MM/YYYY or MM/DD/YYYY — try to detect by value
+        const a=parseInt(rest[0]),b=parseInt(rest[1]);
+        const m=a>12?b:a; // if first part >12 it must be day
+        const d=a>12?a:b;
+        return `${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      }
+    }
+    // Other formats — parse but fix timezone
+    const d=new Date(str);
+    if(!isNaN(d)){
+      return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    }
   }catch(e){}
   return str.slice(0,10);
 }
@@ -2699,7 +2718,8 @@ function openTracker(memberName){
   var rows_html = '';
 
   for(var d = challengeDayNum; d >= 1; d--){
-    var dateObj = new Date(2026, 5, d); // June is month 5
+    // Satara starts June 18 — day 1 = June 18, day 2 = June 19...
+    var dateObj = new Date(2026, 5, 17 + d); // June 18 = day 1
     var dateISO = dateToISO(dateObj);
     var actData = dateMap[dateISO];
     var dateLabel = dateObj.toLocaleDateString('en-IN', {day:'numeric', month:'short'});
@@ -2796,32 +2816,38 @@ document.addEventListener('DOMContentLoaded',()=>{
   renderWeeklyAwards();
   fetchData(false);
 
-/* ══ THEME TOGGLE ══ */
+});
+
+/* ══ THEME TOGGLE — Global scope so onclick works ══ */
 function toggleTheme(){
   var root = document.documentElement;
   var btn  = document.getElementById('theme-btn');
-  var current = root.getAttribute('data-theme');
-  if(current === 'light'){
+  var cur  = root.getAttribute('data-theme');
+  if(cur === 'light'){
     root.removeAttribute('data-theme');
-    btn.textContent = '🌙';
-    localStorage.setItem('satara_theme','dark');
+    if(btn) btn.textContent = '🌙';
+    try{localStorage.setItem('satara_theme','dark');}catch(e){}
   } else {
     root.setAttribute('data-theme','light');
-    btn.textContent = '☀️';
-    localStorage.setItem('satara_theme','light');
+    if(btn) btn.textContent = '☀️';
+    try{localStorage.setItem('satara_theme','light');}catch(e){}
   }
 }
-// Restore saved theme on load
+// Restore saved theme — runs immediately on script parse
 (function(){
-  var saved = localStorage.getItem('satara_theme');
-  if(saved === 'light'){
-    document.documentElement.setAttribute('data-theme','light');
-    var btn = document.getElementById('theme-btn');
-    if(btn) btn.textContent = '☀️';
-  }
+  try{
+    var saved = localStorage.getItem('satara_theme');
+    if(saved === 'light'){
+      document.documentElement.setAttribute('data-theme','light');
+      // Update button after DOM ready
+      document.addEventListener('DOMContentLoaded', function(){
+        var btn = document.getElementById('theme-btn');
+        if(btn) btn.textContent = '☀️';
+      });
+    }
+  }catch(e){}
 })();
 
-});
 </script>
 
 <!-- Theme Toggle Button -->
