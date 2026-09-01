@@ -3,19 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>100 Days Fitness Challenge 2026 — Keya</title>
+<title>100 Days Fitness Challenge 2026 — Friends Forever · Satara</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Bebas+Neue&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0b0e14;--bg2:#111520;--bg3:#141926;--card:#1a2030;--card2:#1e2638;
-  --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.12);
+  /* ── FIERY ORANGE + DARK · Friends Forever, Satara ── */
+  --bg:#0b0e0a;--bg2:#111410;--bg3:#151810;
+  --card:#1a1800;--card2:#201d00;
+  --border:rgba(249,115,22,.08);--border2:rgba(249,115,22,.14);
   --orange:#f97316;--gold:#f59e0b;--silver:#94a3b8;--bronze:#b87333;
   --green:#22c55e;--sky:#38bdf8;--red:#ef4444;--purple:#a78bfa;
-  --white:#f8fafc;--muted:#4e6280;--text:#8fa3be;
+  --white:#fff7ed;--muted:#9a8a72;--text:#c9b896;
   --r:10px;--r2:16px;--r3:22px;
-  --g1:#3b82f6;--g2:#22c55e;--g3:#f97316;--g4:#a78bfa;
-  --g5:#ef4444;--g6:#eab308;--g7:#a8805a;--g8:#6b7280;
+  --g1:#f97316;--g2:#f59e0b;--g3:#ef4444;--g4:#a78bfa;
+  --g5:#22c55e;--g6:#64748b;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%;font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
@@ -29,7 +31,7 @@ input,textarea,select{font-family:inherit}
 /* TOP NAV */
 .topnav{
   position:sticky;top:0;z-index:200;height:64px;
-  background:rgba(8,12,18,.96);backdrop-filter:blur(20px);
+  background:#0e0800;
   border-bottom:1px solid var(--border);
   display:flex;align-items:center;padding:0 2rem;gap:1.5rem;
 }
@@ -59,7 +61,7 @@ input,textarea,select{font-family:inherit}
 @media(max-width:768px){
   .topnav{display:none}
   .page{padding:1rem 1rem calc(68px + env(safe-area-inset-bottom))}
-  .tab-bar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;bottom:0;left:0;right:0;z-index:200;height:calc(58px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);background:rgba(8,12,18,.98);backdrop-filter:blur(16px);border-top:1px solid var(--border)}
+  .tab-bar{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;bottom:0;left:0;right:0;z-index:200;height:calc(58px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);background:rgba(8,12,18,.98);border-top:1px solid var(--border)}
   .tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--muted);font-size:.55rem;font-weight:600;letter-spacing:.4px;text-transform:uppercase;-webkit-tap-highlight-color:transparent;transition:color .15s}
   .tab.active{color:var(--orange)}
   .tab-icon{font-size:1.2rem;line-height:1}
@@ -360,8 +362,8 @@ input,textarea,select{font-family:inherit}
 .rank-num.r1{color:var(--gold)}.rank-num.r2{color:var(--silver)}.rank-num.r3{color:var(--bronze)}
 .rank-av{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0}
 .rank-info{flex:1;min-width:0}
-.rank-name{font-weight:600;font-size:.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.rank-sub{font-size:.62rem;color:var(--muted);margin-top:.04rem}
+.rank-name{font-weight:700;font-size:.88rem;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-sub{font-size:.62rem;color:rgba(255,255,255,.38);margin-top:.04rem}
 .rank-sub .days-zero{color:var(--text);opacity:.55}
 .rank-km{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;color:var(--sky);line-height:1;text-align:right;flex-shrink:0}
 .rank-km small{font-family:'DM Sans',sans-serif;font-size:.52rem;color:var(--muted)}
@@ -401,12 +403,12 @@ input,textarea,select{font-family:inherit}
 @media(max-width:500px){.fr2{grid-template-columns:1fr}}
 .fhint{font-size:.67rem;color:var(--muted);margin-top:.2rem}
 .nd-wrap{position:relative}
-.nd-drop{display:none;position:absolute;top:100%;left:0;right:0;z-index:50;background:var(--card2);border:1.5px solid var(--orange);border-top:none;border-radius:0 0 var(--r) var(--r);max-height:200px;overflow-y:auto;box-shadow:0 8px 28px rgba(0,0,0,.55)}
-.nd-item{display:flex;align-items:center;gap:.6rem;padding:.58rem .9rem;font-size:.84rem;font-weight:500;color:var(--text);cursor:pointer;border-bottom:1px solid rgba(255,255,255,.04);transition:background .12s}
+.nd-drop{display:none;position:absolute;top:100%;left:0;right:0;z-index:50;background:#1f1400;border:1.5px solid var(--orange);border-top:none;border-radius:0 0 var(--r) var(--r);max-height:220px;overflow-y:auto;box-shadow:0 10px 32px rgba(0,0,0,.65)}
+.nd-item{display:flex;align-items:center;gap:.6rem;padding:.62rem .9rem;font-size:.86rem;font-weight:600;color:var(--white);cursor:pointer;border-bottom:1px solid rgba(255,255,255,.06);transition:background .12s}
 .nd-item:last-child{border-bottom:none}
 .nd-item:hover{background:rgba(249,115,22,.1);color:var(--white)}
 .nd-av{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:800;flex-shrink:0}
-.nd-grp{font-size:.58rem;color:var(--muted);margin-left:auto;flex-shrink:0}
+.nd-grp{font-size:.6rem;font-weight:700;color:var(--text);margin-left:auto;flex-shrink:0;white-space:nowrap}
 .nd-confirm{font-size:.68rem;color:var(--green);margin-top:.2rem;display:none}
 .act-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem}
 .ao{background:var(--card);border:2px solid var(--border);border-radius:var(--r);padding:.75rem .35rem;text-align:center;cursor:pointer;transition:all .18s}
@@ -624,7 +626,7 @@ input,textarea,select{font-family:inherit}
 /* ═══ MEMBER TRACKER MODAL ═══ */
 .tracker-overlay{
   display:none;position:fixed;inset:0;z-index:999;
-  background:rgba(0,0,0,.72);backdrop-filter:blur(6px);
+  background:rgba(0,0,0,.85);
   align-items:flex-end;justify-content:center;
   animation:fadeIn .18s ease;
 }
@@ -730,19 +732,21 @@ input,textarea,select{font-family:inherit}
 }
 
 
-/* ════════════════════════════════════════════════════════
-   LIGHT THEME — Strava-inspired: clean white, warm greys
-   Activate with: <html data-theme="light">
-════════════════════════════════════════════════════════ */
+
+
+
+/* ══════════════════════════════════════════
+   LIGHT THEME — Strava-inspired clean style
+══════════════════════════════════════════ */
 [data-theme="light"]{
-  --bg:#f7f5f2;
+  --bg:#f8f7f4;
   --bg2:#ffffff;
-  --bg3:#eeece8;
+  --bg3:#f2f1ee;
   --card:#ffffff;
-  --card2:#f2f0ec;
-  --border:rgba(0,0,0,.07);
+  --card2:#f5f4f1;
+  --border:rgba(0,0,0,.08);
   --border2:rgba(0,0,0,.12);
-  --orange:#fc4c02;   /* Strava orange */
+  --orange:#e8590c;
   --gold:#d97706;
   --silver:#6b7280;
   --bronze:#92400e;
@@ -752,483 +756,305 @@ input,textarea,select{font-family:inherit}
   --purple:#7c3aed;
   --white:#111111;
   --muted:#9ca3af;
-  --text:#374151;
-  --g1:#3b82f6;--g2:#16a34a;--g3:#fc4c02;--g4:#7c3aed;
-  --g5:#dc2626;--g6:#d97706;--g7:#92400e;--g8:#6b7280;
+  --text:#4b5563;
 }
-[data-theme="light"] body{background:#f7f5f2;color:#111111}
-
-/* Nav */
+[data-theme="light"] body{
+  background:#f8f7f4;
+  color:#111111;
+}
 [data-theme="light"] .topnav{
-  background:rgba(255,255,255,.97) !important;
-  border-bottom:1px solid rgba(0,0,0,.07) !important;
-  box-shadow:0 1px 8px rgba(0,0,0,.06) !important;
+  background:#ffffff !important;
+  border-bottom:1px solid rgba(0,0,0,.08) !important;
+  box-shadow:0 1px 8px rgba(0,0,0,.08) !important;
 }
 [data-theme="light"] .tab-bar{
-  background:rgba(255,255,255,.97) !important;
-  border-top:1px solid rgba(0,0,0,.07) !important;
-  box-shadow:0 -1px 8px rgba(0,0,0,.05) !important;
+  background:#ffffff !important;
+  border-top:1px solid rgba(0,0,0,.08) !important;
+  box-shadow:0 -1px 8px rgba(0,0,0,.06) !important;
 }
-[data-theme="light"] .nav-link{color:#374151 !important}
-[data-theme="light"] .nav-link.active,
-[data-theme="light"] .tab.active{color:var(--orange) !important}
-[data-theme="light"] .nav-logo{color:var(--orange) !important}
-[data-theme="light"] .nav-day{
-  background:rgba(252,76,2,.08) !important;
-  border-color:rgba(252,76,2,.2) !important;
+[data-theme="light"] .nav-link{color:#4b5563 !important}
+[data-theme="light"] .nav-link.active{
   color:var(--orange) !important;
+  background:rgba(232,89,12,.08) !important;
 }
-[data-theme="light"] .live-dot{background:var(--orange) !important}
-
-/* Cards */
+[data-theme="light"] .nav-logo{color:var(--orange) !important}
 [data-theme="light"] .card,
 [data-theme="light"] .stat-box,
 [data-theme="light"] .rank-item,
+[data-theme="light"] .group-block,
 [data-theme="light"] .faq-item,
 [data-theme="light"] .hero-right,
+[data-theme="light"] .wa-award-card,
 [data-theme="light"] .item-card{
   background:#ffffff !important;
-  border-color:rgba(0,0,0,.07) !important;
-  box-shadow:0 2px 10px rgba(0,0,0,.05) !important;
+  border-color:rgba(0,0,0,.08) !important;
+  box-shadow:0 2px 12px rgba(0,0,0,.06) !important;
 }
-[data-theme="light"] .card2{background:#f2f0ec !important;border-color:rgba(0,0,0,.08) !important}
-
-/* Hero */
+[data-theme="light"] .card2,
+[data-theme="light"] .ai-result,
+[data-theme="light"] .nd-drop{
+  background:#f5f4f1 !important;
+  border-color:rgba(0,0,0,.1) !important;
+}
 [data-theme="light"] .hero-h1 .n1,
 [data-theme="light"] .hero-h1 .n3{color:#111111 !important}
-[data-theme="light"] .hero-sub{color:#374151 !important}
-[data-theme="light"] .hero-org{color:#9ca3af !important}
-[data-theme="light"] .hero-pill{
-  background:rgba(252,76,2,.07) !important;
-  border-color:rgba(252,76,2,.2) !important;
-  color:var(--orange) !important;
-}
-[data-theme="light"] .vp{
-  background:rgba(252,76,2,.06) !important;
-  border-color:rgba(252,76,2,.18) !important;
-  color:var(--orange) !important;
-}
-
-/* Champ */
-[data-theme="light"] .champ-card{
-  background:linear-gradient(135deg,rgba(252,76,2,.08),rgba(217,119,6,.04)) !important;
-  border-color:rgba(252,76,2,.18) !important;
-}
-[data-theme="light"] .champ-km-n{color:var(--orange) !important}
-
-/* Podium */
-[data-theme="light"] .pod-card.g{
-  background:linear-gradient(180deg,rgba(217,119,6,.1),rgba(217,119,6,.03)) !important;
-  border-color:rgba(217,119,6,.28) !important;
-}
-[data-theme="light"] .pod-name{color:#111111 !important}
-[data-theme="light"] .pod-days{color:#9ca3af !important}
-
-/* Progress */
-[data-theme="light"] .progress-bar{background:rgba(0,0,0,.07) !important}
-
-/* Rankings */
-[data-theme="light"] .rank-name{color:#111111 !important;font-weight:700 !important}
+[data-theme="light"] .hero-sub{color:#4b5563 !important}
+[data-theme="light"] .stat-n{color:var(--orange) !important}
+[data-theme="light"] .stat-l{color:#6b7280 !important}
+[data-theme="light"] .rank-name{color:#111111 !important}
 [data-theme="light"] .rank-sub{color:#9ca3af !important}
 [data-theme="light"] .rank-km{color:var(--orange) !important}
-[data-theme="light"] .rank-item:hover{
-  background:#f7f5f2 !important;
-  border-color:rgba(252,76,2,.2) !important;
+[data-theme="light"] .rank-item:hover{background:#f8f7f4 !important}
+[data-theme="light"] .fi,
+[data-theme="light"] .fta{
+  background:#f5f4f1 !important;
+  border-color:rgba(0,0,0,.12) !important;
+  color:#111111 !important;
 }
-[data-theme="light"] .rank-num{color:#9ca3af !important}
-[data-theme="light"] .rank-num.r1{color:var(--gold) !important}
-[data-theme="light"] .rank-num.r2{color:var(--silver) !important}
-[data-theme="light"] .rank-num.r3{color:var(--bronze) !important}
-
-/* Groups */
-[data-theme="light"] .mc{background:#f2f0ec !important;border-color:rgba(0,0,0,.08) !important}
+[data-theme="light"] .fi:focus,
+[data-theme="light"] .fta:focus{
+  border-color:var(--orange) !important;
+  box-shadow:0 0 0 3px rgba(232,89,12,.1) !important;
+  background:#ffffff !important;
+}
+[data-theme="light"] .nd-item{
+  color:#111111 !important;
+  border-bottom-color:rgba(0,0,0,.06) !important;
+}
+[data-theme="light"] .nd-item:hover{background:rgba(232,89,12,.06) !important}
+[data-theme="light"] .nd-grp{color:#9ca3af !important}
+[data-theme="light"] .champ-card{
+  background:linear-gradient(135deg,rgba(232,89,12,.08),rgba(217,119,6,.04)) !important;
+  border-color:rgba(232,89,12,.2) !important;
+}
+[data-theme="light"] .mc{
+  background:#f5f4f1 !important;
+  border-color:rgba(0,0,0,.08) !important;
+}
 [data-theme="light"] .mc.done{
   background:rgba(22,163,74,.06) !important;
   border-color:rgba(22,163,74,.3) !important;
 }
 [data-theme="light"] .mc-name{color:#111111 !important}
 [data-theme="light"] .mc-km{color:var(--orange) !important}
-[data-theme="light"] .mc-act,.mentor-flow{color:#9ca3af !important}
-
-/* Day/week nav */
+[data-theme="light"] .mc-act{color:#6b7280 !important}
+[data-theme="light"] .prog-wrap{background:rgba(0,0,0,.06) !important}
 [data-theme="light"] .day-nav,
 [data-theme="light"] .week-nav{
-  background:#f2f0ec !important;
-  border-color:rgba(0,0,0,.07) !important;
+  background:#f5f4f1 !important;
+  border-color:rgba(0,0,0,.08) !important;
 }
+[data-theme="light"] .day-nav-btn,
+[data-theme="light"] .week-nav-btn{color:#4b5563 !important}
 [data-theme="light"] .day-nav-date{color:#111111 !important}
 [data-theme="light"] .day-nav-day{color:#9ca3af !important}
-[data-theme="light"] .day-nav-btn,
-[data-theme="light"] .week-nav-btn{color:#374151 !important}
-[data-theme="light"] .day-nav-btn:hover:not(:disabled),
-[data-theme="light"] .week-nav-btn:hover:not(:disabled){
-  background:rgba(252,76,2,.08) !important;
-  color:var(--orange) !important;
-}
-
-/* Section labels */
+[data-theme="light"] .section-hdr,
+[data-theme="light"] .sec-title{color:#111111 !important}
 [data-theme="light"] .sec-label{color:var(--orange) !important}
-[data-theme="light"] .sec-title span{color:var(--orange) !important}
-[data-theme="light"] .divider-label{color:rgba(252,76,2,.65) !important}
-[data-theme="light"] .divider-label::after{background:rgba(0,0,0,.08) !important}
-
-/* FAQ */
+[data-theme="light"] .divider-label{color:rgba(232,89,12,.7) !important}
+[data-theme="light"] .pod-card.g{
+  background:linear-gradient(180deg,rgba(217,119,6,.12),rgba(217,119,6,.04)) !important;
+  border-color:rgba(217,119,6,.3) !important;
+}
+[data-theme="light"] .pod-name{color:#111111 !important}
+[data-theme="light"] .progress-bar{background:rgba(0,0,0,.08) !important}
+[data-theme="light"] .faq-item{border-color:rgba(0,0,0,.08) !important}
 [data-theme="light"] .faq-q{color:#111111 !important}
-[data-theme="light"] .faq-a{color:#374151 !important}
-[data-theme="light"] .faq-ico{background:rgba(0,0,0,.06) !important;color:#374151 !important}
-[data-theme="light"] .faq-item.open .faq-ico{background:var(--orange) !important;color:#fff !important}
-
-/* Form inputs */
-[data-theme="light"] .fi,
-[data-theme="light"] .fta{
-  background:#f2f0ec !important;
-  border-color:rgba(0,0,0,.1) !important;
-  color:#111111 !important;
-}
-[data-theme="light"] .fi:focus,
-[data-theme="light"] .fta:focus{
-  border-color:var(--orange) !important;
-  box-shadow:0 0 0 3px rgba(252,76,2,.1) !important;
+[data-theme="light"] .faq-a{color:#4b5563 !important}
+[data-theme="light"] .tracker-modal{
   background:#ffffff !important;
+  border-color:rgba(0,0,0,.12) !important;
 }
-[data-theme="light"] .fl{color:#374151 !important}
-[data-theme="light"] .nd-drop{
-  background:#ffffff !important;
-  border-color:var(--orange) !important;
-}
-[data-theme="light"] .nd-item{color:#111111 !important;border-bottom-color:rgba(0,0,0,.05) !important}
-[data-theme="light"] .nd-item:hover{background:rgba(252,76,2,.05) !important}
-[data-theme="light"] .nd-grp{color:#9ca3af !important}
-
-/* Admin */
-[data-theme="light"] .admin-lock{background:#ffffff !important;border-color:rgba(0,0,0,.08) !important}
-[data-theme="light"] .lock-title{color:#111111 !important}
-[data-theme="light"] .lock-desc{color:#374151 !important}
-[data-theme="light"] .admin-section-hdr{color:var(--orange) !important}
-[data-theme="light"] .admin-tab{color:#374151 !important;border-color:rgba(0,0,0,.1) !important}
-[data-theme="light"] .admin-tab.active{
-  color:var(--orange) !important;
-  background:rgba(252,76,2,.08) !important;
-  border-color:rgba(252,76,2,.25) !important;
-}
-[data-theme="light"] .toggle-sw input:checked + .toggle-sl{background:var(--orange) !important}
-
-/* Tracker modal */
-[data-theme="light"] .tracker-overlay{background:rgba(0,0,0,.5) !important}
-[data-theme="light"] .tracker-modal{background:#ffffff !important;border-color:rgba(0,0,0,.1) !important}
 [data-theme="light"] .tm-name{color:#111111 !important}
 [data-theme="light"] .tm-group{color:#9ca3af !important}
-[data-theme="light"] .tm-close{background:rgba(0,0,0,.06) !important;color:#374151 !important}
-[data-theme="light"] .tm-close:hover{background:rgba(0,0,0,.1) !important}
-[data-theme="light"] .tm-stat{background:#f2f0ec !important;border-color:rgba(0,0,0,.07) !important}
-[data-theme="light"] .tm-stat-l{color:#9ca3af !important}
-[data-theme="light"] .tm-day-row.active-day{background:rgba(22,163,74,.06) !important}
-[data-theme="light"] .tm-day-date{color:#9ca3af !important}
 [data-theme="light"] .tm-day-act{color:#111111 !important}
-[data-theme="light"] .tm-no-act{color:#9ca3af !important}
-[data-theme="light"] .tm-section-title{color:var(--orange) !important}
-[data-theme="light"] .tm-section-title::after{background:rgba(0,0,0,.08) !important}
-
-/* WA */
-[data-theme="light"] .wa-row{
-  background:rgba(252,76,2,.05) !important;
-  border-color:rgba(252,76,2,.15) !important;
-}
-
-/* Upload zone */
-[data-theme="light"] .upload-zone{
-  background:#f2f0ec !important;
-  border-color:rgba(0,0,0,.15) !important;
-}
-[data-theme="light"] .upload-zone:hover{
-  border-color:var(--orange) !important;
-  background:rgba(252,76,2,.04) !important;
-}
-
-/* Empty state */
-[data-theme="light"] .empty-t{color:#374151 !important}
-[data-theme="light"] .empty-d{color:#9ca3af !important}
-
-/* Cat tabs */
-[data-theme="light"] .cat-tab{
-  background:#f2f0ec !important;
+[data-theme="light"] .tm-day-row.active-day{background:rgba(22,163,74,.05) !important}
+[data-theme="light"] .tm-day-row.missed-day{opacity:.4}
+[data-theme="light"] .admin-lock{
+  background:#ffffff !important;
   border-color:rgba(0,0,0,.1) !important;
-  color:#374151 !important;
 }
-[data-theme="light"] .cat-tab.aw{border-color:var(--green) !important;color:var(--green) !important}
-[data-theme="light"] .cat-tab.ar{border-color:var(--orange) !important;color:var(--orange) !important}
-[data-theme="light"] .cat-tab.ac{border-color:var(--sky) !important;color:var(--sky) !important}
+[data-theme="light"] .lock-title{color:#111111 !important}
 
-/* Motiv banner */
-[data-theme="light"] .motiv-banner{
-  background:linear-gradient(135deg,rgba(252,76,2,.08),rgba(217,119,6,.05)) !important;
-  border-color:rgba(252,76,2,.2) !important;
-}
-
-/* ════════════════════════════════════════════════════════
-   DARK THEME — Runna-inspired: deep navy, clean contrast
-   This is the DEFAULT — Runna uses very dark navy blues
-════════════════════════════════════════════════════════ */
-[data-theme="dark"]{
-  --bg:#0a0d16;
-  --bg2:#0f1320;
-  --bg3:#131826;
-  --card:#181e2e;
-  --card2:#1c2234;
-  --border:rgba(255,255,255,.07);
-  --border2:rgba(255,255,255,.12);
-  --orange:#f97316;
-  --gold:#f59e0b;
-  --silver:#94a3b8;
-  --bronze:#b87333;
-  --green:#22c55e;
-  --sky:#38bdf8;
-  --red:#ef4444;
-  --purple:#a78bfa;
-  --white:#f0f4ff;
-  --muted:#3a4a6a;
-  --text:#7a90b8;
-  --g1:#3b82f6;--g2:#22c55e;--g3:#f97316;--g4:#a78bfa;
-  --g5:#ef4444;--g6:#eab308;--g7:#a8805a;--g8:#6b7280;
-}
-[data-theme="dark"] body{background:#0a0d16;color:#f0f4ff}
-[data-theme="dark"] .topnav{background:rgba(10,13,22,.96) !important}
-[data-theme="dark"] .tab-bar{background:rgba(10,13,22,.98) !important}
-
-/* Theme toggle button — fixed bottom right */
+/* Theme toggle button */
 .theme-toggle{
   position:fixed;
   right:1rem;
-  bottom:calc(68px + env(safe-area-inset-bottom) + .6rem);
-  width:40px;height:40px;
+  bottom:5.5rem;
+  width:42px;height:42px;
   border-radius:50%;
   background:var(--card);
   border:1.5px solid var(--border2);
-  box-shadow:0 4px 16px rgba(0,0,0,.3);
+  box-shadow:0 4px 16px rgba(0,0,0,.25);
   display:flex;align-items:center;justify-content:center;
-  cursor:pointer;z-index:500;
-  font-size:1rem;line-height:1;
-  transition:transform .2s,box-shadow .2s;
+  cursor:pointer;z-index:998;
+  font-size:1.1rem;
+  transition:all .2s;
 }
-@media(min-width:769px){
-  .theme-toggle{bottom:1.2rem;right:1.4rem}
+.theme-toggle:hover{
+  transform:scale(1.1);
+  box-shadow:0 6px 20px rgba(0,0,0,.3);
 }
-.theme-toggle:hover{transform:scale(1.12);box-shadow:0 6px 22px rgba(0,0,0,.4)}
 [data-theme="light"] .theme-toggle{
   background:#ffffff;
   border-color:rgba(0,0,0,.12);
-  box-shadow:0 4px 14px rgba(0,0,0,.1);
+  box-shadow:0 4px 16px rgba(0,0,0,.12);
 }
 
 
-/* ═══════════════════════════════════════════════════════════
-   PRAVEEN-STYLE REDESIGN — New hero, stats, entries, groups
-═══════════════════════════════════════════════════════════ */
+/* ════════════════════════════════════════════════════════
+   PRAVEEN-STYLE HOME LAYOUT
+════════════════════════════════════════════════════════ */
 
-/* ── Hero Banner ── */
+/* Hero Banner */
 .hero-banner{
   background:linear-gradient(160deg,var(--bg2) 0%,var(--bg3) 100%);
-  border:1px solid var(--border);
+  border:1px solid var(--border2);
   border-radius:var(--r3);
   padding:1.6rem 1.4rem 1.2rem;
-  margin-bottom:1rem;
-  position:relative;
-  overflow:hidden;
+  margin-bottom:.8rem;
+  position:relative;overflow:hidden;
 }
 .hero-banner::before{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at 80% 0%,rgba(249,115,22,.12),transparent 60%);
+  background:radial-gradient(ellipse at 80% 0%,rgba(249,115,22,.14),transparent 60%);
   pointer-events:none;
 }
-.hero-top-row{
-  display:flex;align-items:center;justify-content:space-between;
-  margin-bottom:.8rem;
+.hb-top{
+  display:flex;align-items:center;
+  justify-content:space-between;margin-bottom:.8rem;
 }
-.hero-badge{
+.hb-badge{
   display:flex;align-items:center;gap:.4rem;
-  font-size:.7rem;font-weight:700;letter-spacing:.06em;
+  font-size:.68rem;font-weight:700;letter-spacing:.06em;
   color:var(--orange);text-transform:uppercase;
 }
-.hero-day-pill{
-  font-size:.72rem;font-weight:700;
+.hb-day-pill{
+  font-size:.7rem;font-weight:700;
   background:rgba(249,115,22,.12);
-  border:1px solid rgba(249,115,22,.25);
+  border:1px solid rgba(249,115,22,.28);
   color:var(--orange);
-  padding:.25rem .8rem;border-radius:99px;
-  letter-spacing:.05em;
+  padding:.22rem .8rem;border-radius:99px;
 }
-.hero-title{
+.hb-title{
   font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(2.4rem,7vw,4rem);
-  letter-spacing:3px;
-  color:var(--white);
-  line-height:1;
-  margin-bottom:.35rem;
+  font-size:clamp(2.6rem,8vw,4.5rem);
+  letter-spacing:4px;color:var(--white);
+  line-height:1;margin-bottom:.3rem;
 }
-.hero-sub{
-  font-size:.82rem;color:var(--text);
-  font-style:italic;margin-bottom:.25rem;
+.hb-quote{
+  font-size:.8rem;font-style:italic;
+  color:var(--text);margin-bottom:.2rem;
 }
-.hero-org{
-  font-size:.78rem;font-weight:700;
-  color:var(--orange);letter-spacing:.04em;
+.hb-org{
+  font-size:.75rem;font-weight:700;
+  color:var(--orange);letter-spacing:.05em;
   text-transform:uppercase;margin-bottom:.2rem;
 }
-.hero-dates{
-  font-size:.72rem;color:var(--muted);margin-bottom:1rem;
-}
-.hero-prog-wrap{
-  display:flex;align-items:center;gap:.8rem;
-}
-.hero-prog-bar{
-  flex:1;height:6px;
-  background:rgba(255,255,255,.08);
+.hb-dates{font-size:.7rem;color:var(--muted);margin-bottom:.9rem}
+.hb-prog-row{display:flex;align-items:center;gap:.8rem}
+.hb-prog-bar{
+  flex:1;height:5px;
+  background:rgba(255,255,255,.07);
   border-radius:3px;overflow:hidden;
 }
-.hero-prog-fill{
+.hb-prog-fill{
   height:100%;width:0%;
   background:linear-gradient(90deg,var(--orange),var(--gold));
-  border-radius:3px;
-  transition:width .6s ease;
+  border-radius:3px;transition:width .6s ease;
 }
-.hero-prog-label{
-  font-size:.7rem;color:var(--text);white-space:nowrap;
-}
+.hb-prog-lbl{font-size:.68rem;color:var(--muted);white-space:nowrap}
 
-/* ── Stats Row ── */
-.stats-row{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:.6rem;
-  margin-bottom:1rem;
+/* Stats Row */
+.hb-stats{
+  display:flex;align-items:center;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--r2);padding:.8rem 1rem;
+  margin-bottom:1rem;gap:0;
 }
-.stat-card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:var(--r2);
-  padding:.9rem .6rem;
-  text-align:center;
-}
-.stat-icon{font-size:1.2rem;margin-bottom:.3rem}
-.stat-val{
+.hb-stat{flex:1;text-align:center}
+.hb-stat-n{
   font-family:'Bebas Neue',sans-serif;
-  font-size:1.5rem;color:var(--orange);
-  line-height:1;
+  font-size:1.6rem;color:var(--orange);line-height:1;
 }
-.stat-lbl{
-  font-size:.6rem;font-weight:700;letter-spacing:.05em;
-  color:var(--muted);text-transform:uppercase;
-  margin-top:.2rem;
+.hb-stat-l{
+  font-size:.6rem;font-weight:700;
+  letter-spacing:.05em;color:var(--muted);
+  text-transform:uppercase;margin-top:.15rem;
+}
+.hb-stat-div{
+  width:1px;height:2rem;
+  background:var(--border2);flex-shrink:0;
 }
 
-/* ── Leaderboard Rank List on Home ── */
-.rank-list-wrap{margin-top:.5rem}
+/* Section label */
+.hb-section-label{
+  font-size:.7rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--orange);margin:.8rem 0 .5rem;
+}
 
-/* ── Entries Page ── */
+/* Entries */
 .entries-filter-row{
-  display:flex;gap:.5rem;flex-wrap:wrap;
-  margin-bottom:.8rem;
+  display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.6rem;
 }
-.ef-btn{
-  padding:.35rem .9rem;border-radius:99px;
-  font-size:.78rem;font-weight:700;
-  background:var(--card);border:1px solid var(--border);
-  color:var(--text);cursor:pointer;
-  transition:all .15s;
+.ef-tab{
+  padding:.28rem .8rem;border-radius:99px;
+  font-size:.75rem;font-weight:700;
+  background:var(--card);border:1px solid var(--border2);
+  color:var(--text);cursor:pointer;transition:all .15s;
 }
-.ef-btn.active,.ef-btn:hover{
-  background:var(--orange);border-color:var(--orange);
-  color:#fff;
+.ef-tab.active,.ef-tab:hover{
+  background:var(--orange);border-color:var(--orange);color:#fff;
 }
-.entries-search-wrap{margin-bottom:1rem}
 .entries-search{
-  width:100%;padding:.7rem 1rem;
-  background:var(--card);border:1px solid var(--border);
+  width:100%;padding:.6rem 1rem;box-sizing:border-box;
+  background:var(--card);border:1px solid var(--border2);
   border-radius:var(--r2);color:var(--white);
-  font-size:.88rem;outline:none;
+  font-size:.84rem;outline:none;margin-bottom:.6rem;
   transition:border .2s;
 }
 .entries-search:focus{border-color:var(--orange)}
-.entries-table-wrap{overflow-x:auto}
-.entries-table{
-  width:100%;border-collapse:collapse;
-  font-size:.8rem;
-}
+.entries-table-wrap{overflow-x:auto;margin-bottom:1rem}
+.entries-table{width:100%;border-collapse:collapse;font-size:.78rem}
 .entries-table th{
-  padding:.6rem .8rem;text-align:left;
-  color:var(--muted);font-size:.7rem;
-  font-weight:700;letter-spacing:.05em;
-  text-transform:uppercase;
+  padding:.5rem .7rem;text-align:left;
+  color:var(--muted);font-size:.68rem;font-weight:700;
+  letter-spacing:.05em;text-transform:uppercase;
   border-bottom:1px solid var(--border);
 }
 .entries-table td{
-  padding:.55rem .8rem;
+  padding:.5rem .7rem;
   border-bottom:1px solid rgba(255,255,255,.03);
   color:var(--text);
 }
-.entries-table tr:hover td{
-  background:rgba(249,115,22,.04);
-}
-.entries-table td:first-child{color:var(--muted);font-size:.75rem}
+.entries-table tr:hover td{background:rgba(249,115,22,.04)}
+.entries-table td:first-child{color:var(--muted);font-size:.72rem}
 .entries-table td:nth-child(2){color:var(--white);font-weight:600}
 .entries-table td:nth-child(4){color:var(--orange);font-weight:700}
+.et-empty{text-align:center;padding:2rem;color:var(--muted)}
 .et-walk{color:var(--green)!important}
 .et-run{color:var(--orange)!important}
 .et-cycle{color:var(--sky)!important}
 
-/* Light theme overrides for new elements */
+/* Home rank list */
+#home-rank-list .rank-item{cursor:pointer}
+
+/* Light theme */
 [data-theme="light"] .hero-banner{
-  background:linear-gradient(160deg,#ffffff,#f2f0ec);
-  border-color:rgba(0,0,0,.07);
+  background:linear-gradient(160deg,#fff,#f2f0ec);
+  border-color:rgba(0,0,0,.08);
 }
-[data-theme="light"] .hero-title{color:#111}
-[data-theme="light"] .hero-prog-bar{background:rgba(0,0,0,.08)}
-[data-theme="light"] .stat-card{background:#fff;border-color:rgba(0,0,0,.07)}
-[data-theme="light"] .stat-lbl{color:#9ca3af}
-[data-theme="light"] .ef-btn{background:#fff;border-color:rgba(0,0,0,.1);color:#374151}
+[data-theme="light"] .hb-title{color:#111}
+[data-theme="light"] .hb-prog-bar{background:rgba(0,0,0,.08)}
+[data-theme="light"] .hb-stats{background:#fff;border-color:rgba(0,0,0,.07)}
+[data-theme="light"] .hb-stat-div{background:rgba(0,0,0,.1)}
+[data-theme="light"] .hb-stat-l,.hb-prog-lbl{color:#9ca3af}
+[data-theme="light"] .ef-tab{background:#fff;border-color:rgba(0,0,0,.1);color:#374151}
 [data-theme="light"] .entries-search{background:#fff;border-color:rgba(0,0,0,.1);color:#111}
-[data-theme="light"] .entries-table th{color:#9ca3af;border-color:rgba(0,0,0,.08)}
-[data-theme="light"] .entries-table td{color:#374151;border-color:rgba(0,0,0,.04)}
+[data-theme="light"] .entries-table th{border-color:rgba(0,0,0,.08);color:#9ca3af}
+[data-theme="light"] .entries-table td{border-color:rgba(0,0,0,.04);color:#374151}
 [data-theme="light"] .entries-table td:nth-child(2){color:#111}
-[data-theme="light"] .entries-table tr:hover td{background:rgba(252,76,2,.03)}
-
-
-/* ── Groups Page ── */
-.gp-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--r2);padding:1rem;margin-bottom:.8rem;
-  border-left:3px solid var(--gc,var(--orange));
-}
-.gp-header{
-  display:flex;align-items:center;gap:.7rem;
-  margin-bottom:.8rem;
-}
-.gp-emoji{font-size:1.4rem}
-.gp-name{font-weight:700;color:var(--white);font-size:.9rem}
-.gp-km{font-size:.72rem;color:var(--muted);margin-top:.1rem}
-.gp-member{
-  display:flex;align-items:center;gap:.6rem;
-  padding:.35rem 0;
-  border-bottom:1px solid rgba(255,255,255,.03);
-}
-.gp-rank{
-  font-size:.72rem;color:var(--muted);
-  width:1.2rem;text-align:center;flex-shrink:0;
-}
-.gp-mname{flex:1;font-size:.82rem;color:var(--white)}
-.gp-mright{display:flex;align-items:center;gap:.6rem}
-.gp-mbar{
-  width:60px;height:4px;
-  background:rgba(255,255,255,.07);
-  border-radius:2px;overflow:hidden;
-}
-.gp-mfill{height:100%;background:var(--gc,var(--orange));border-radius:2px}
-.gp-mkm{font-size:.78rem;font-weight:700;color:var(--orange);min-width:2.5rem;text-align:right}
-[data-theme="light"] .gp-card{background:#fff;border-color:rgba(0,0,0,.07)}
-[data-theme="light"] .gp-name{color:#111}
-[data-theme="light"] .gp-member{border-color:rgba(0,0,0,.05)}
-[data-theme="light"] .gp-mname{color:#111}
-[data-theme="light"] .gp-mbar{background:rgba(0,0,0,.07)}
 
 </style>
 </head>
@@ -1238,16 +1064,14 @@ input,textarea,select{font-family:inherit}
 <!-- TOP NAV -->
 <nav class="topnav">
   <div class="nav-brand">
-    <div class="nav-logo">🏃 100D FITNESS · KEYA</div>
+    <div class="nav-logo">🏃 100D FITNESS · SATARA</div>
     <div class="nav-day"><div class="live-dot"></div><span id="nav-day">Loading…</span></div>
   </div>
   <div class="nav-links">
-    <div class="nav-link active" onclick="goto('home',this)">🏆 Leaderboard</div>
-    <div class="nav-link" onclick="goto('board',this)">📋 Summary</div>
-    <div class="nav-link" onclick="goto('rankings',this)">📅 Weekly</div>
-    <div class="nav-link" onclick="goto('groups-page',this)">👥 Groups</div>
-    <div class="nav-link" onclick="goto('entries',this)">📊 All Entries</div>
-    <div class="nav-link" onclick="goto('faq',this)">❓ FAQ</div>
+    <div class="nav-link active" onclick="goto('home',this)"><span>🏠</span> Home</div>
+    <div class="nav-link" onclick="goto('board',this)"><span>🏆</span> Board</div>
+    <div class="nav-link" onclick="goto('rankings',this)"><span>📋</span> Rankings</div>
+    <div class="nav-link" onclick="goto('faq',this)"><span>❓</span> FAQ</div>
   </div>
   <div class="nav-right">
     <div class="sync-txt" id="last-sync"></div>
@@ -1260,71 +1084,98 @@ input,textarea,select{font-family:inherit}
 <!-- ══════════════════ HOME ══════════════════ -->
 <div id="pg-home" class="page active">
 
-  <!-- ── HERO BANNER ── -->
+  <!-- ── HERO BANNER (Praveen-style) ── -->
   <div class="hero-banner">
-    <div class="hero-top-row">
-      <div class="hero-badge"><span class="live-dot"></span> LIVE</div>
-      <div class="hero-day-pill" id="nav-day">Day — of 100</div>
+    <div class="hb-top">
+      <div class="hb-badge"><span class="live-dot"></span> Challenge Live — 18 June 2026</div>
+      <div class="hb-day-pill" id="nav-day">Day — of 100</div>
     </div>
+    <div class="hb-title">100 DAYS FITNESS</div>
+    <div class="hb-quote">"Let's move together, stronger every day!"</div>
+    <div class="hb-org">Friends Forever Group · Satara</div>
+    <div class="hb-dates">18 June 2026 &nbsp;→&nbsp; 26 September 2026</div>
+    <div class="hb-prog-row">
+      <div class="hb-prog-bar"><div class="hb-prog-fill" id="prog-fill"></div></div>
+      <div class="hb-prog-lbl">Day <span id="prog-day">—</span> of 100</div>
+    </div>
+  </div>
 
-    <div class="hero-title">100 DAYS FITNESS</div>
-    <div class="hero-sub">"Let's move together, stronger every day!"</div>
-    <div class="hero-org">Keya Apartments Community</div>
-    <div class="hero-dates">1 June 2026 &nbsp;→&nbsp; 9 September 2026</div>
-
-    <!-- Progress bar -->
-    <div class="hero-prog-wrap">
-      <div class="hero-prog-bar">
-        <div class="hero-prog-fill" id="prog-fill"></div>
-      </div>
-      <div class="hero-prog-label">Day <span id="prog-day">—</span> of 100</div>
+  <!-- ── MOTIVATION BANNER (keep existing — admin controlled) ── -->
+  <div class="motiv-banner" id="motiv-banner">
+    <div class="motiv-banner-bg" id="banner-bg"></div>
+    <div class="motiv-banner-overlay"></div>
+    <div class="motiv-banner-text" style="text-align:center;max-width:100%;padding:1.2rem 1.8rem">
+      <div class="motiv-banner-quote" id="banner-quote-el">Every step forward is a step toward achieving something bigger and better.</div>
     </div>
   </div>
 
   <!-- ── STATS ROW ── -->
-  <div class="stats-row">
-    <div class="stat-card">
-      <div class="stat-icon">👥</div>
-      <div class="stat-val" id="hero-members">43</div>
-      <div class="stat-lbl">Athletes</div>
+  <div class="hb-stats">
+    <div class="hb-stat">
+      <div class="hb-stat-n" id="hero-members">27</div>
+      <div class="hb-stat-l">Athletes</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-icon">📏</div>
-      <div class="stat-val" id="hero-km">—</div>
-      <div class="stat-lbl">Total KM</div>
+    <div class="hb-stat-div"></div>
+    <div class="hb-stat">
+      <div class="hb-stat-n" id="hero-km">—</div>
+      <div class="hb-stat-l">Total KM</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-icon">📅</div>
-      <div class="stat-val" id="hero-today">—</div>
-      <div class="stat-lbl">Today</div>
+    <div class="hb-stat-div"></div>
+    <div class="hb-stat">
+      <div class="hb-stat-n" id="hero-today">—</div>
+      <div class="hb-stat-l">Today</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-icon">📝</div>
-      <div class="stat-val" id="hero-logs">—</div>
-      <div class="stat-lbl">Total Logs</div>
-    </div>
-  </div>
-
-  <!-- ── MOTIVATION BANNER ── -->
-  <div class="motiv-banner" id="motiv-banner">
-    <div class="motiv-banner-bg" id="banner-bg"></div>
-    <div class="motiv-banner-overlay"></div>
-    <div class="motiv-content">
-      <div class="motiv-quote" id="banner-quote-el"></div>
+    <div class="hb-stat-div"></div>
+    <div class="hb-stat">
+      <div class="hb-stat-n" id="hero-logs">—</div>
+      <div class="hb-stat-l">Total Logs</div>
     </div>
   </div>
 
-  <!-- ── TOP 3 PODIUM ── -->
-  <div class="section-hdr">
-    <div class="sec-label">🏆 Live Leaderboard</div>
+  <!-- ── LEADERBOARD ── -->
+  <div class="hb-section-label">🏆 Live Leaderboard</div>
+  <div id="home-podium" class="home-podium"></div>
+  <div id="home-rank-list"></div>
+
+  <!-- ── ALL ENTRIES (Praveen-style) ── -->
+  <div class="hb-section-label" style="margin-top:1.5rem">
+    📊 All Entries · Search your day-wise logs
   </div>
-  <div id="home-podium" class="podium-wrap"></div>
+  <div class="entries-filter-row">
+    <button class="ef-tab active" onclick="filterEntries('all',this)">All</button>
+    <button class="ef-tab" onclick="filterEntries('Walking',this)">🚶 Walk</button>
+    <button class="ef-tab" onclick="filterEntries('Running',this)">🏃 Run</button>
+    <button class="ef-tab" onclick="filterEntries('Cycling',this)">🚴 Cycle</button>
+  </div>
+  <input class="entries-search" id="entries-search" type="text"
+    placeholder="Search your name to see your personal day-wise entries"
+    oninput="renderEntries()">
+  <div class="entries-table-wrap">
+    <table class="entries-table">
+      <thead><tr><th>Date</th><th>Name</th><th>Activity</th><th>KM</th><th>Notes</th></tr></thead>
+      <tbody id="entries-body">
+        <tr><td colspan="5" class="et-empty">Loading…</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-  <!-- ── FULL RANK LIST ── -->
-  <div id="home-rank-list" class="rank-list-wrap"></div>
+  <!-- ── WHY JOIN / GOALS ── -->
+  <div class="hb-section-label" style="margin-top:1.5rem">Why Join</div>
+  <div class="items-grid" style="margin-bottom:2rem">
+    <div class="item-card"><span class="item-icon">🎯</span><div class="item-title">Build Discipline</div><div class="item-desc">Show up every day. Small actions compound into extraordinary results.</div></div>
+    <div class="item-card"><span class="item-icon">🔁</span><div class="item-title">Stay Consistent</div><div class="item-desc">100 days builds a lifelong fitness habit you'll carry forever.</div></div>
+    <div class="item-card"><span class="item-icon">😄</span><div class="item-title">Fun & Fitness</div><div class="item-desc">Walk, run, or cycle — keep it joyful every single day.</div></div>
+    <div class="item-card"><span class="item-icon">🏅</span><div class="item-title">Marathon Ready</div><div class="item-desc">Build endurance toward your first 5K, 10K, or half marathon.</div></div>
+    <div class="item-card"><span class="item-icon">🤝</span><div class="item-title">Grow Together</div><div class="item-desc">Our community moves and celebrates together.</div></div>
+  </div>
 
+  <div class="page-footer">
+    <div class="footer-copy">100 Days Fitness Challenge 2026 · Built with 💚 for Friends Forever Group · Satara</div>
+  </div>
 </div>
 
+
+<!-- ══════════════════ BOARD ══════════════════ -->
 <div id="pg-board" class="page">
   <div class="board-wrap">
     <div class="stats-row">
@@ -1411,7 +1262,7 @@ input,textarea,select{font-family:inherit}
         </div>
       </div>
     </div>
-    <div class="page-footer"><div class="footer-copy">100 Days Fitness Challenge 2026 · Keya Apartments</div></div>
+    <div class="page-footer"><div class="footer-copy">100 Days Fitness Challenge 2026 · Friends Forever Group</div></div>
   </div>
 </div>
 
@@ -1463,7 +1314,7 @@ input,textarea,select{font-family:inherit}
     </div>
 
 
-    <div class="page-footer"><div class="footer-copy">100 Days Fitness Challenge 2026 · Keya Apartments</div></div>
+    <div class="page-footer"><div class="footer-copy">100 Days Fitness Challenge 2026 · Friends Forever Group</div></div>
   </div>
 </div>
 
@@ -1696,7 +1547,7 @@ input,textarea,select{font-family:inherit}
       <p>Everything about the 100-day challenge</p>
     </div>
     <div id="faq-list"></div>
-    <div class="page-footer"><div class="footer-copy">100 Days Fitness Challenge 2026 · Keya Apartments</div></div>
+    <div class="page-footer"><div class="footer-copy">100 Days Fitness Challenge 2026 · Friends Forever Group</div></div>
   </div>
 </div>
 
@@ -1723,40 +1574,78 @@ input,textarea,select{font-family:inherit}
 
 <!-- MOBILE TAB BAR -->
 <div class="tab-bar">
-  <button class="tab active" onclick="goto('home',this)"><span class="tab-icon">🏆</span><span>Board</span></button>
-  <button class="tab" onclick="goto('board',this)"><span class="tab-icon">📋</span><span>Summary</span></button>
-  <button class="tab" onclick="goto('rankings',this)"><span class="tab-icon">📅</span><span>Weekly</span></button>
-  <button class="tab" onclick="goto('groups-page',this)"><span class="tab-icon">👥</span><span>Groups</span></button>
-  <button class="tab" onclick="goto('entries',this)"><span class="tab-icon">📊</span><span>Entries</span></button>
+  <button class="tab active" onclick="goto('home',this)"><span class="tab-icon">🏠</span><span>Home</span></button>
+  <button class="tab" onclick="goto('board',this)"><span class="tab-icon">🏆</span><span>Board</span></button>
+  <button class="tab" onclick="goto('rankings',this)"><span class="tab-icon">📋</span><span>Ranks</span></button>
+  <button class="tab" onclick="goto('faq',this)"><span class="tab-icon">❓</span><span>FAQ</span></button>
 </div>
 
 <script>
 /* ══ CONFIG ══ */
-const APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbznv7D7hxks3y80gUe_0I9TLQ0rNHMgqzT-Zy5tq3-v84HLPIsWdknOx9XkSexjjbx-/exec';
-const MY_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vR8fZtNYlF6BtiQ6VedKS64xYVfTJpV8XHw8N_x07Zh3ybTlyn3rNTM2d9Zm-FCMS8LOXKkpGWp_Ezo/pub?gid=2128169938&single=true&output=csv';
+const APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbwpZeX4SPx-Tr5aIEo0gQVVfcAQ5iNkj2wcNMTLyaPqXTb_tLWZehQOPquiQ3EaUYGmUA/exec'; // ← Deploy new Apps Script for Satara sheet
+const MY_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vTRjK_L00prnTzDPdREeKrfFHu0d-gIc2Gt1MYQoTRepZGHyeZO9sVCqWcS4yjGc4dNW4UWZ7bKdUyw/pub?gid=1206976747&single=true&output=csv'; // ← Publish activityTracker-STR sheet as CSV and paste URL here
 const FRIEND_CSV='';
 const ADMIN_PIN='1001'; // ← change this to your preferred 4-digit PIN
 
+
 /* ══ GROUPS ══ */
 const GROUPS=[
-  {id:'g1',name:'Group 1',color:'#3b82f6',emoji:'🔵',members:['Asmita Tiwari','Sipra Tripathy','Yogesh Karira','Geeta Sharma','Parveen Bansal'],flow:'Asmita → Sipra → Yogesh → Geeta → Parveen → Asmita'},
-  {id:'g2',name:'Group 2',color:'#22c55e',emoji:'🟢',members:['Shobha','Aakash Rayate','Sonam Agnihotri','Neha Goel','Binay Lal'],flow:'Shobha → Aakash → Sonam → Neha → Binay → Shobha'},
-  {id:'g3',name:'Group 3',color:'#f97316',emoji:'🟠',members:['Poulomi Mukherjee','Puneet Ahuja','Jaya Bharti','Ankit','Pooja Gupta'],flow:'Poulomi → Puneet → Jaya → Ankit → Pooja → Poulomi'},
-  {id:'g4',name:'Group 4',color:'#a78bfa',emoji:'🟣',members:['Shibani Pattnaik','Shubham Singh','Pritam Kumari','Shilpy Pateriya','Gaurav Verma'],flow:'Shibani → Shubham → Pritam → Shilpy → Gaurav → Shibani'},
-  {id:'g5',name:'Group 5',color:'#ef4444',emoji:'🔴',members:['Praveen Choudhary','Shyamala','Jyotika Bhurani','Saksham Tandone','Kali Tripathy'],flow:'Praveen → Shyamala → Jyotika → Saksham → Kali → Praveen'},
-  {id:'g6',name:'Group 6',color:'#eab308',emoji:'🟡',members:['Aparna Shinde','Aman Gupta','Kumar Abhishek','Shikha Tandon','Mayuri Hegde'],flow:'Aparna → Aman → Abhishek → Shikha → Mayuri → Aparna'},
-  {id:'g7',name:'Group 7',color:'#a8805a',emoji:'🟤',members:['Renu Goel','BIBEK LAL','Dikshant Ohri','Surabhi Telang','Pooja'],flow:'Renu → Bibek → Dikshant → Surabhi → Pooja → Renu'},
-  {id:'g8',name:'Group 8',color:'#9ca3af',emoji:'⚫',members:['Saswati Mahapatra','Amar','Richa Johar','Thavakumar Swaminathan','Shubham Lakhotia','Parita Kachhela'],flow:'Saswati → Amar → Richa → Thavakumar → Shubham → Parita → Saswati'},
+  {id:'g1',name:'Group 1',color:'#f97316',emoji:'🔥',
+   members:['Mukund Dagadu Navale','Amar Shinde','Arati Mukund Navale','Harshvardhan Pravin Gujar',],
+   flow:'Mukund → Amar → Arati → Harshvardhan → Mukund'},
+  {id:'g2',name:'Group 2',color:'#f59e0b',emoji:'⚡',
+   members:['Ritambhara A Shinde','Pravin Parshuram Gujar','Pruthviraj Narayan Navale','Deepali Mohan Gole'],
+   flow:'Ritambhara → Pravin → Harshvardhan → Deepali → ritambhara'},
+  {id:'g3',name:'Group 3',color:'#ef4444',emoji:'🏃',
+   members:['Anil Laxman Phadatare','Saksham Anil Phadatare','Nilesh Baban Tate','Krishna Shinde','Sandeep phadke'],
+   flow:'Anil → Saksham → Nilesh → Krishna → Sandeep  → Anil'},
+  {id:'g4',name:'Group 4',color:'#a78bfa',emoji:'💜',
+   members:['Aparna Shinde','Pratibha Raviraj Bhosale','Sonali Gulab Shinde','Rupali Anil Phadatare','Varsha Pawar'],
+   flow:'Aparna → Pratibha → Sonali → Rupali → Varsha → Aparna'},
+  {id:'g5',name:'Group 5',color:'#22c55e',emoji:'🌟',
+   members:['Umesh Bansode','Sandeep Pawar','Chitrani Mukund Navale','Sambhaji Sanjay Patil', 'Vaishnavi Shinde'],
+   flow:'Umesh → Sandeep → Chitrani → Sambhaji → Vaishnavi → Umesh'},
+  {id:'g6',name:'Group 6',color:'#64748b',emoji:'⬛',
+   members:['Mukund Hanmant Londhe','Mohan Baban Gole','Sheetal Pravin Gujar','Dhruv Umesh Bansode'],
+   flow:'Mukund → Mohan → Sheetal → Dhruv → Mukund'},
 ];
 const ALL_MEMBERS=[...new Set(GROUPS.flatMap(g=>g.members))];
 
 /* ══ EMAILS ══ */
-const EMAILS={'Amar':'amr.000in@gmail.com','Shobha':'shobhak2012@gmail.com','Aakash Rayate':'rayate2410@gmail.com','Poulomi Mukherjee':'mukherjee.poulomi09@gmail.com','Sipra Tripathy':'sipra.dsh@gmail.com','Shibani Pattnaik':'shibani.pattnaik@gmail.com','Puneet Ahuja':'ahujapuneet65@gmail.com','Shubham Singh':'singh.shubh647@gmail.com','Praveen Choudhary':'prvnchdry@gmail.com','Surabhi Telang':'surabhitelang@gmail.com','Aparna Shinde':'aparna.pattadar@gmail.com','Renu Goel':'renugoel393@gmail.com','Saswati Mahapatra':'saswatier@gmail.com','Sonam Agnihotri':'sonam.agnihotri.1705@gmail.com','Jyotika Bhurani':'jbhurani87@gmail.com','Yogesh Karira':'karira.yogesh@gmail.com','Mayuri Hegde':'mayuri.athavale88@gmail.com','Asmita Tiwari':'tiwai@gmail.com','Jaya Bharti':'jayabharti2006@gmail.com','Pritam Kumari':'','Aman Gupta':'gupta.aman2332@gmail.com','BIBEK LAL':'bibeklal@gmail.com','Richa Johar':'richajohar1992@gmail.com','Dikshant Ohri':'ohridikshant3@gmail.com','Shyamala':'shyamlas@yahoo.com','Shubham Lakhotia':'Shubhamlaks92@gmail.com'};
+const EMAILS={
+  'Deepali Mohan Gole':'goledeepali22@gmail.com',
+  'Mukund Dagadu Navale':'mukundnavale78@gmail.com',
+  'Chitrani Mukund Navale':'chitraninavale@gmail.com',
+  'Sheetal Pravin Gujar':'sheetalcomputers167@gmail.com',
+  'Pravin Parshuram Gujar':'pravingujar78@gmail.com',
+  'Umesh Bansode':'umeshbansode6@gmail.com',
+  'Harshvardhan Pravin Gujar':'harshvardhangujar52@gmail.com',
+  'Nilesh Baban Tate':'tatenilesh22@gmail.com',
+  'Anil Laxman Phadatare':'sakshienterprises79@gmail.com',
+  'Saksham Anil Phadatare':'sakshamphadatare13@gmail.com',
+  'Rupali Anil Phadatare':'roopaliphadatare13@gmail.com',
+  'Arati Mukund Navale':'aratimnavale@gmail.com',
+  'Aparna Shinde':'aparna.pattadar@gmail.com',
+  'Amar Shinde':'amr.000in@gmail.com',
+  'Mohan Baban Gole':'',
+  'Mukund Hanmant Londhe':'mukundlondhe7@gmail.com',
+  'Sonali Gulab Shinde':'sonaligshinde06@gmail.com',
+  'Pruthviraj Narayan Navale':'pruthvirajnawale73@gmail.com',
+  'Sandeep Pawar':'pawarsv20@gmail.com',
+  'Pratibha Raviraj Bhosale':'pratibhashinde92@gmail.com',
+  'Sambhaji Sanjay Patil':'pratikpatil9853@gmail.com',
+  'Krishna Shinde':'krisha.shinde@outlook.com',
+  'Dhruv Umesh Bansode':'dhruvbansode5@gmail.com',
+  'Varsha Pawar':'varshasp1506@gmail.com',
+  'Ritambhara A Shinde':'ritambhara.shinde@gmail.com',
+  'Vaishnavi Shinde':'vaishnavi.shinde@gmail.com',
+  'Sandeep phadke':'sandeep.phadke23@gmail.com',
+};
 
 /* ══ MEMBER GROUP LOOKUP ══ */
 const MEMBER_GROUP={};
 GROUPS.forEach(g=>g.members.forEach(m=>{MEMBER_GROUP[m.toLowerCase()]=g}));
-const GC={'Group 1':'#3b82f6','Group 2':'#22c55e','Group 3':'#f97316','Group 4':'#a78bfa','Group 5':'#ef4444','Group 6':'#eab308','Group 7':'#a8805a','Group 8':'#9ca3af'};
+const GC={'Group 1':'#f97316','Group 2':'#f59e0b','Group 3':'#ef4444','Group 4':'#a78bfa','Group 5':'#22c55e','Group 6':'#64748b'};
 
 /* ══ AVATAR COLORS ══ */
 const AV=[['#1565c0','#0d47a1'],['#c62828','#b71c1c'],['#6a1b9a','#4a148c'],['#e65100','#bf360c'],['#00695c','#004d40'],['#1b5e20','#33691e'],['#0277bd','#01579b'],['#558b2f','#33691e'],['#f57f17','#e65100'],['#37474f','#263238'],['#4527a0','#311b92'],['#2e7d32','#1b5e20'],['#ad1457','#880e4f'],['#0288d1','#01579b'],['#bf360c','#7f0000'],['#1a237e','#283593'],['#33691e','#1b5e20'],['#006064','#00838f'],['#4a148c','#6a1b9a'],['#e65100','#f57f17'],['#1b5e20','#388e3c'],['#880e4f','#c2185b'],['#bf360c','#e64a19'],['#37474f','#546e7a'],['#0d47a1','#1976d2'],['#2e7d32','#388e3c'],['#6a1b9a','#7b1fa2'],['#b71c1c','#c62828'],['#01579b','#0277bd'],['#e65100','#bf360c'],['#004d40','#00695c'],['#33691e','#558b2f'],['#263238','#37474f'],['#311b92','#4527a0'],['#880e4f','#ad1457'],['#7f0000','#bf360c'],['#283593','#1a237e'],['#00838f','#006064'],['#f57f17','#f9a825'],['#388e3c','#2e7d32']];
@@ -1767,12 +1656,15 @@ function avidx(name){const nm=(name||'').toLowerCase().trim();const i=ALL_MEMBER
 /* ══ NAV ══ */
 function goto(id,el){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  const pg = document.getElementById('pg-'+id);
-  if(pg) pg.classList.add('active');
+  document.getElementById('pg-'+id).classList.add('active');
   document.querySelectorAll('.nav-link,.tab').forEach(b=>b.classList.remove('active'));
-  if(el) el.classList.add('active');
+  const idx=['home','board','rankings','faq','admin'].indexOf(id);
+  if(idx>=0){
+    document.querySelectorAll('.nav-link')[idx]?.classList.add('active');
+    document.querySelectorAll('.tab')[idx]?.classList.add('active');
+  }
   window.scrollTo({top:0,behavior:'instant'});
-  fetchData(false);
+  if(id==='board'||id==='rankings') fetchData(false);
 }
 
 // Hidden admin access — type "admin" in URL hash or triple-tap logo
@@ -1795,8 +1687,8 @@ window.debugFetch = async function(){
     console.error('FETCH ERROR:', e.message);
   }
 };
-window.debugVersion = 'v16-jun-2026';
-console.log('Keya Fitness', window.debugVersion, '- Type debugFetch() to test CSV');
+window.debugVersion = 'satara-v1-jun-2026';
+console.log('Satara Fitness', window.debugVersion, '- Type debugFetch() to test CSV');
 
 document.addEventListener('DOMContentLoaded',()=>{ if(location.hash==='#admin') showAdmin(); });
 function showAdmin(){
@@ -1808,7 +1700,7 @@ function showAdmin(){
 
 
 /* ══ MOTIVATION BANNER ══ */
-const BANNER_KEY = 'keya100_banner';
+const BANNER_KEY = 'satara100_banner';
 
 function loadBanner(){
   try{
@@ -1920,18 +1812,18 @@ function checkPin(){
 }
 
 /* ══ DAY LOGIC ══ */
-const START_DATE = new Date(2026,5,1); // June 1 2026
+const START_DATE = new Date(2026,5,1); // June 18 2026
 let viewingDate = new Date(); // currently viewed date in buddy groups
 
 function todayISO(){const t=new Date();return `${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`}
 function dateToISO(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
-function dayNumber(d){const mid=new Date(d.getFullYear(),d.getMonth(),d.getDate());const smid=new Date(2026,5,1);const diff=Math.floor((mid-smid)/86400000);return Math.max(1,Math.min(100,diff+1))}
+function dayNumber(d){const mid=new Date(d.getFullYear(),d.getMonth(),d.getDate());const smid=new Date(2026,5,18);const diff=Math.floor((mid-smid)/86400000);return Math.max(1,Math.min(100,diff+1))}
 
 function initDayTag(){
   const today=new Date();
   const todayMid=new Date(today.getFullYear(),today.getMonth(),today.getDate());
   const diff=Math.floor((todayMid-new Date(2026,5,1))/86400000);
-  let label='Starts 1 Jun 2026',dayN=1;
+  let label='Starts 18 Jun 2026',dayN=1;
   if(diff>=0&&diff<100){dayN=diff+1;label=`Day ${dayN} of 100`;}
   else if(diff>=100){label='Challenge Complete 🎉';dayN=100;}
   document.getElementById('nav-day').textContent=label;
@@ -1969,8 +1861,27 @@ function changeDay(dir){
 function isoDate(str){
   if(!str) return '';
   try{
-    if(str.includes('/')){const p=str.split('/');if(p.length===3){if(p[2].length===4)return `${p[2]}-${p[1].padStart(2,'0')}-${p[0].padStart(2,'0')}`;return `${p[2]}-${p[0].padStart(2,'0')}-${p[1].padStart(2,'0')}`;}}
-    const d=new Date(str);if(!isNaN(d))return d.toISOString().slice(0,10);
+    str = String(str).trim();
+    // YYYY-MM-DD — return directly (no timezone risk)
+    if(/^\d{4}-\d{2}-\d{2}$/.test(str)) return str;
+    // Slash formats
+    if(str.includes('/')){
+      const p=str.split('/');
+      if(p.length>=3){
+        const y=p.find(x=>x.length===4)||p[2];
+        const rest=p.filter(x=>x!==y);
+        // DD/MM/YYYY or MM/DD/YYYY — try to detect by value
+        const a=parseInt(rest[0]),b=parseInt(rest[1]);
+        const m=a>12?b:a; // if first part >12 it must be day
+        const d=a>12?a:b;
+        return `${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      }
+    }
+    // Other formats — parse but fix timezone
+    const d=new Date(str);
+    if(!isNaN(d)){
+      return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    }
   }catch(e){}
   return str.slice(0,10);
 }
@@ -2021,7 +1932,7 @@ function renderAll(rows){
   // board stats
   document.getElementById('lb-km').textContent=totalKm.toFixed(1);
   document.getElementById('lb-logs').textContent=rows.length;
-  document.getElementById('lb-p').textContent=43;
+  document.getElementById('lb-p').textContent=27;
   // champ
   if(todayRows.length){
     const best=[...todayRows].sort((a,b)=>b.km-a.km)[0];
@@ -2032,7 +1943,6 @@ function renderAll(rows){
   }else{document.getElementById('champ-card').style.display='none';}
   const ranked=Object.entries(totKm).map(([name,km])=>({name,km,days:totDays[name]||0,lastAct:rows.filter(r=>r.name===name&&r.km>0).pop()?.act||'—'})).sort((a,b)=>b.km-a.km);
   renderHomePodium(ranked);
-  renderHomeRankList(ranked);
   // Cat achievers — always use full all-time data
   // Board: today's leaders (via day nav)
   renderCatForDay();
@@ -2046,7 +1956,7 @@ function renderAll(rows){
 /* ══ HOME MINI PODIUM ══ */
 function renderHomePodium(ranked){
   const el=document.getElementById('home-podium');
-  if(!ranked.length){el.innerHTML=`<div class="empty" style="width:100%;padding:1.2rem"><div class="empty-icon">🏁</div><div class="empty-d">Activities from 1 June 2026</div></div>`;return;}
+  if(!ranked.length){el.innerHTML=`<div class="empty" style="width:100%;padding:1.2rem"><div class="empty-icon">🏁</div><div class="empty-d">Activities from 18 June 2026</div></div>`;return;}
   const t=[ranked[0]||null,ranked[1]||null,ranked[2]||null];
   const order=[{p:t[1],cls:'s',tr:'🥈',rk:'2ND'},{p:t[0],cls:'g',tr:'🥇',rk:'1ST'},{p:t[2],cls:'b',tr:'🥉',rk:'3RD'}];
   el.innerHTML=order.map(({p,cls,tr,rk})=>{
@@ -2315,7 +2225,7 @@ function renderRankCatAchievers(catKm, totDays, totKm){
 /* ══ SHARE ══ */
 function shareApp(){
   const url=window.location.href.split('#')[0];
-  if(navigator.share)navigator.share({title:'100 Days Fitness – Keya',text:'Join our challenge!',url});
+  if(navigator.share)navigator.share({title:'100 Days Fitness – Satara',text:'Join our challenge!',url});
   else navigator.clipboard.writeText(url).then(()=>alert('Link copied to clipboard! 📋'));
 }
 
@@ -2388,7 +2298,7 @@ async function submitLog(){
   if(!name||!date||!act){showStatus('err','Please select Name, Date and Activity Type.');return;}
   const base=act==='Cycling'?5:2;
   if(km<base){showStatus('err',`Minimum ${base} km for ${act}. 💪`);return;}
-  const dayNum=Math.max(1,Math.floor((new Date(date)-new Date(2026,5,1))/86400000)+1);
+  const dayNum=Math.max(1,Math.floor((new Date(date)-new Date(2026,5,18))/86400000)+1);
   const btn=document.getElementById('sub-btn');btn.disabled=true;
   showStatus('loading','Saving to Google Sheet…');
   try{
@@ -2795,7 +2705,7 @@ async function submitScan(){
 
   try{
     await fetch(APPS_SCRIPT_URL, {
-      method:'POST', mode:'no-cors',
+      method:'POST',mode:'no-cors',
       headers:{'Content-Type':'text/plain'},
       body: JSON.stringify({name, email, flat:'', date, dayNum, activity:act, km, duration:'', mapLink:'', notes:'[AI Scan] '+notes, points:0, tokenUsed:false})
     });
@@ -2901,8 +2811,10 @@ function openTracker(memberName){
   if(!overlay) return;
 
   // Get member data from allRows
+  // Filter rows for this member — match name case-insensitively
   var memberRows = allRows.filter(function(r){
-    return r.name && r.name.toLowerCase().trim() === memberName.toLowerCase().trim() && r.km > 0;
+    if(!r.name || r.km <= 0) return false;
+    return r.name.toLowerCase().trim() === memberName.toLowerCase().trim();
   });
 
   // Get group info
@@ -2958,7 +2870,8 @@ function openTracker(memberName){
   var rows_html = '';
 
   for(var d = challengeDayNum; d >= 1; d--){
-    var dateObj = new Date(2026, 5, d); // June is month 5
+    // Satara starts June 18 — day 1 = June 18, day 2 = June 19...
+    var dateObj = new Date(2026, 5, 17 + d); // June 18 = day 1
     var dateISO = dateToISO(dateObj);
     var actData = dateMap[dateISO];
     var dateLabel = dateObj.toLocaleDateString('en-IN', {day:'numeric', month:'short'});
@@ -3021,17 +2934,17 @@ document.addEventListener('keydown', function(e){
 
 /* ══ FAQ ══ */
 const FAQS=[
-  ["What is this challenge?","Community fitness event for Keya Apartment members from <strong>1 June to 9 September 2026</strong>. Walk, run, or cycle every day and log your activity!"],
-  ["Who can join?","All <strong>43 registered members</strong> of Keya Apartments aged 14+. Family members in the same flat are also welcome!"],
+  ["What is this challenge?","Community fitness event for Friends Forever Group members from <strong>18 June to 26 September 2026</strong>. Walk, run, or cycle every day and log your activity!"],
+  ["Who can join?","All <strong>43 registered members</strong> of Friends Forever Group aged 14+. Family members in the same flat are also welcome!"],
   ["Minimum distances?","🚶 <strong>Walking</strong>: 2 km/day · 🏃 <strong>Running</strong>: 2 km/day · 🚴 <strong>Cycling</strong>: 5 km/day"],
-  ["How do I track and log my activity?","<strong>Step 1</strong> — Complete your walk, run or cycle using any fitness app — Strava, Apple Health, Google Fit, Garmin, Nike Run Club, or your smartwatch.<br><br><strong>Step 2</strong> — Take a screenshot of your activity summary showing the distance covered.<br><br><strong>Step 3</strong> — Post the screenshot in the <strong>Keya Fitness WhatsApp group</strong>.<br><br><strong>Step 4</strong> — The organiser reads your screenshot and logs it to the leaderboard. Your entry appears within minutes! 📊"],
+  ["How do I track and log my activity?","<strong>Step 1</strong> — Complete your walk, run or cycle using any fitness app — Strava, Apple Health, Google Fit, Garmin, Nike Run Club, or your smartwatch.<br><br><strong>Step 2</strong> — Take a screenshot of your activity summary showing the distance covered.<br><br><strong>Step 3</strong> — Post the screenshot in the <strong>Satara Fitness WhatsApp group</strong>.<br><br><strong>Step 4</strong> — The organiser reads your screenshot and logs it to the leaderboard. Your entry appears within minutes! 📊"],
   ["What are the Fitness Buddy Groups?","8 groups of members with a mentor flow — each member motivates and checks on the next person in their circle daily. <strong>A → B → C → D → A</strong>. A simple message like <em>Did you complete your activity today?</em> can make a huge difference!"],
   ["What are Category Achievers on the Board page?","Shows the <strong>top 3 leaders for the selected day</strong> — separately for Walking, Running and Cycling. Use the ‹ › day navigation to see leaders for any past day."],
   ["What are Category Achievers on the Rankings page?","Shows <strong>all-time cumulative KM leaders</strong> — total KM across all 100 days. The Overall tab shows combined KM across all activity types."],
   ["What are the Weekly Performance Awards?","Three awards calculated every week:<br>🥇 <strong>Distance Champion</strong> — most total km this week<br>🔥 <strong>Iron Streak</strong> — longest consecutive days logged overall<br>📈 <strong>Progressive Mover</strong> — Walk/Run km growing day by day (cycling excluded since it naturally covers more km)"],
   ["How is the Distance Champion decided?","The <strong>Distance Champion</strong> on the Board page is the member with the <strong>highest km logged on that specific day</strong>. It updates every 2 minutes. Use the ‹ › navigation to see champions for past days!"],
   ["What does the gold glow on member cards mean?","Members who go well beyond the minimum km for that day earn a ✨ <strong>gold glow card</strong> and a ⭐ trophy — recognising exceptional effort!"],
-  ["How do I register?","Registration was open until 1 June 2026. Contact the organiser to check if late registration is possible."],
+  ["How do I register?","Registration was open until 18 June 2026. Contact the organiser to check if late registration is possible."],
   ["Can I see previous days on the Board?","Yes! Use the <strong>‹ ›</strong> arrows in the Fitness Buddy Groups section to navigate day by day through the challenge — see who logged what on any past day."],
 ];
 function renderFAQ(){
@@ -3040,10 +2953,10 @@ function renderFAQ(){
 }
 
 function checkReg(){
-  if(new Date()>new Date('2026-06-01T23:59:59')){
+  if(new Date()>new Date('2026-06-17T23:59:59')){
     const b=document.getElementById('reg-btn'),n=document.getElementById('reg-note');
     if(b){b.classList.add('closed');b.textContent='🔒 Registration Closed';b.onclick=null;}
-    if(n)n.textContent='Registration closed on 1 June 2026.';
+    if(n)n.textContent='Registration closed on 18 June 2026.';
   }
 }
 
@@ -3054,233 +2967,127 @@ document.addEventListener('DOMContentLoaded',()=>{
   loadBanner();
   renderWeeklyAwards();
   fetchData(false);
+
 });
 
-/* ══ THEME TOGGLE — Light (Strava) / Dark (Runna) ══ */
+/* ══ THEME TOGGLE — Global scope so onclick works ══ */
 function toggleTheme(){
-  var html=document.documentElement;
-  var btn=document.getElementById('theme-btn');
-  var cur=html.getAttribute('data-theme');
-  if(cur==='light'){
-    html.setAttribute('data-theme','dark');
-    btn.textContent='☀️';
-    try{localStorage.setItem('keya_theme','dark');}catch(e){}
+  var root = document.documentElement;
+  var btn  = document.getElementById('theme-btn');
+  var cur  = root.getAttribute('data-theme');
+  if(cur === 'light'){
+    root.removeAttribute('data-theme');
+    if(btn) btn.textContent = '🌙';
+    try{localStorage.setItem('satara_theme','dark');}catch(e){}
   } else {
-    html.setAttribute('data-theme','light');
-    btn.textContent='🌙';
-    try{localStorage.setItem('keya_theme','light');}catch(e){}
+    root.setAttribute('data-theme','light');
+    if(btn) btn.textContent = '☀️';
+    try{localStorage.setItem('satara_theme','light');}catch(e){}
   }
 }
+// Restore saved theme — runs immediately on script parse
 (function(){
   try{
-    var saved=localStorage.getItem('keya_theme');
-    if(saved==='light'){
+    var saved = localStorage.getItem('satara_theme');
+    if(saved === 'light'){
       document.documentElement.setAttribute('data-theme','light');
-      var btn=document.getElementById('theme-btn');
-      if(btn) btn.textContent='🌙';
-    } else if(saved==='dark'){
-      document.documentElement.setAttribute('data-theme','dark');
-      var btn=document.getElementById('theme-btn');
-      if(btn) btn.textContent='☀️';
+      // Update button after DOM ready
+      document.addEventListener('DOMContentLoaded', function(){
+        var btn = document.getElementById('theme-btn');
+        if(btn) btn.textContent = '☀️';
+      });
     }
   }catch(e){}
 })();
 
 
-/* ═══════════════════════════════════════════════════════
-   ENTRIES PAGE
-═══════════════════════════════════════════════════════ */
-let _entriesFilter = 'all';
-
+/* ══ ENTRIES PAGE ══ */
+var _efFilter = 'all';
 function filterEntries(type, btn){
-  _entriesFilter = type;
-  document.querySelectorAll('.ef-btn').forEach(b=>b.classList.remove('active'));
+  _efFilter = type;
+  document.querySelectorAll('.ef-tab').forEach(b=>b.classList.remove('active'));
   if(btn) btn.classList.add('active');
   renderEntries();
 }
-
 function renderEntries(){
-  const search = (document.getElementById('entries-search')?.value||'').toLowerCase().trim();
-  const tbody  = document.getElementById('entries-body');
+  var search = (document.getElementById('entries-search')||{value:''}).value.toLowerCase().trim();
+  var tbody  = document.getElementById('entries-body');
   if(!tbody) return;
-
-  let rows = [...allRows].filter(r => r.km > 0);
-
-  // Filter by activity
-  if(_entriesFilter !== 'all'){
-    rows = rows.filter(r => actCat(r.act) === _entriesFilter);
-  }
-  // Filter by name search
-  if(search){
-    rows = rows.filter(r => (r.name||'').toLowerCase().includes(search));
-  }
-
-  // Sort newest first
-  rows.sort((a,b) => (b.date||'').localeCompare(a.date||''));
-
+  var rows = allRows.filter(function(r){ return r.km > 0; });
+  if(_efFilter !== 'all') rows = rows.filter(function(r){ return actCat(r.act)===_efFilter; });
+  if(search) rows = rows.filter(function(r){ return (r.name||'').toLowerCase().includes(search); });
+  rows.sort(function(a,b){ return (b.date||'').localeCompare(a.date||''); });
   if(!rows.length){
-    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:2rem;color:var(--muted)">No entries found</td></tr>';
+    tbody.innerHTML='<tr><td colspan="5" class="et-empty">No entries found</td></tr>';
     return;
   }
-
-  tbody.innerHTML = rows.slice(0, 200).map(r => {
-    const cat  = actCat(r.act);
-    const icon = cat==='Running'?'🏃':cat==='Cycling'?'🚴':'🚶';
-    const cls  = cat==='Running'?'et-run':cat==='Cycling'?'et-cycle':'et-walk';
-    const date = (r.date||'').slice(0,10);
-    const km   = r.km ? r.km.toFixed(1) : '—';
-    return `<tr>
-      <td>${date}</td>
-      <td>${r.name||'—'}</td>
-      <td class="${cls}">${icon} ${cat}</td>
-      <td>${km}</td>
-      <td style="color:var(--muted);font-size:.72rem">${r.link?'<a href="'+r.link+'" target="_blank" style="color:var(--orange)">🔗</a>':''}</td>
-    </tr>`;
+  tbody.innerHTML = rows.slice(0,300).map(function(r){
+    var cat  = actCat(r.act);
+    var icon = cat==='Running'?'🏃':cat==='Cycling'?'🚴':'🚶';
+    var cls  = cat==='Running'?'et-run':cat==='Cycling'?'et-cycle':'et-walk';
+    var km   = r.km ? r.km.toFixed(1) : '—';
+    var date = (r.date||'').slice(0,10);
+    return '<tr><td>'+date+'</td><td>'+r.name+'</td>'
+      +'<td class="'+cls+'">'+icon+' '+cat+'</td>'
+      +'<td>'+km+'</td>'
+      +'<td style="color:var(--muted);font-size:.72rem">'+(r.link?'<a href="'+r.link+'" target="_blank" style="color:var(--orange)">🔗</a>':'')+'</td>'
+      +'</tr>';
   }).join('');
 }
 
-/* ═══════════════════════════════════════════════════════
-   GROUPS PAGE — render all 8 groups
-═══════════════════════════════════════════════════════ */
-function renderGroupsPage(){
-  const container = document.getElementById('groups-container');
-  if(!container) return;
-
-  const totKm  = {};
-  const totDays = {};
-  allRows.forEach(r=>{
-    if(!r.name||r.km<=0) return;
-    totKm[r.name]  = (totKm[r.name]||0) + r.km;
-    totDays[r.name]= (totDays[r.name]||0) + 1;
-  });
-
-  container.innerHTML = GROUPS.map(g => {
-    const memberRows = g.members.map(m => ({
-      name: m,
-      km:   totKm[m]||0,
-      days: totDays[m]||0,
-    })).sort((a,b)=>b.km-a.km);
-
-    const groupKm = memberRows.reduce((s,m)=>s+m.km, 0);
-
-    return `
-    <div class="gp-card" style="--gc:${g.color}">
-      <div class="gp-header">
-        <span class="gp-emoji">${g.emoji}</span>
-        <div>
-          <div class="gp-name">${g.name}</div>
-          <div class="gp-km">${groupKm.toFixed(1)} km total</div>
-        </div>
-      </div>
-      <div class="gp-members">
-        ${memberRows.map((m,i) => {
-          const pct = m.km > 0 ? Math.min(100, (m.km / (memberRows[0].km||1)) * 100) : 0;
-          return `<div class="gp-member">
-            <div class="gp-rank">${i+1}</div>
-            <div class="gp-mname">${m.name}</div>
-            <div class="gp-mright">
-              <div class="gp-mbar"><div class="gp-mfill" style="width:${pct}%"></div></div>
-              <div class="gp-mkm">${m.km.toFixed(1)}</div>
-            </div>
-          </div>`;
-        }).join('')}
-      </div>
-    </div>`;
-  }).join('');
-}
-
-/* ── Hook into renderAll to also update new pages ── */
-const _origRenderAll = renderAll;
-function renderAll(rows){
-  _origRenderAll(rows);
-
-  // Update stats row
-  const logs = rows.filter(r=>r.km>0).length;
-  const el = document.getElementById('hero-logs');
-  if(el) el.textContent = logs;
-
-  // Update hero-km without ' km' suffix for cleaner look
-  const tkm = rows.reduce((s,r)=>s+(r.km||0),0);
-  const hkm = document.getElementById('hero-km');
-  if(hkm) hkm.textContent = tkm.toFixed(0);
-
-  // Render entries and groups if on those pages
-  renderEntries();
-  renderGroupsPage();
-}
-
-/* ── Add home rank list render ── */
+/* ══ HOME RANK LIST — full ranked list below podium ══ */
 function renderHomeRankList(ranked){
-  const el = document.getElementById('home-rank-list');
-  if(!el || !ranked.length) return;
-
-  el.innerHTML = ranked.map((r,i) => {
-    const gi  = MEMBER_GROUP[r.name.toLowerCase()];
-    const grp = gi ? `<span style="color:${gi.color};font-size:.7rem">${gi.emoji}</span>` : '';
-    const icon = i===0?'🥇':i===1?'🥈':i===2?'🥉':`<span style="color:var(--muted);font-size:.8rem">${i+1}</span>`;
-    const [c1,c2] = avc(avidx(r.name));
-    return `<div class="rank-item" onclick="openTracker('${r.name.replace(/'/g,"\'")}')">
-      <div class="rank-left">
-        <div class="rank-num">${icon}</div>
-        <div class="av" style="background:linear-gradient(135deg,${c1},${c2})">${ini(r.name)}</div>
-        <div>
-          <div class="rank-name">${r.name} ${grp}</div>
-          <div class="rank-sub">${r.days} day${r.days!==1?'s':''} · ${r.lastAct}</div>
-        </div>
-      </div>
-      <div class="rank-km">${r.km.toFixed(1)} km</div>
-    </div>`;
+  var el = document.getElementById('home-rank-list');
+  if(!el) return;
+  el.innerHTML = ranked.map(function(r,i){
+    var g   = MEMBER_GROUP[r.name.toLowerCase()];
+    var grp = g ? '<span style="color:'+g.color+';font-size:.7rem">'+g.emoji+'</span>' : '';
+    var num = i===0?'🥇':i===1?'🥈':i===2?'🥉'
+              :'<span style="color:var(--muted);font-size:.8rem;font-weight:700">'+(i+1)+'</span>';
+    var av  = avc(avidx(r.name));
+    return '<div class="rank-item" onclick="openTracker(''+r.name.replace(/'/g,"\'")+'')">'
+      +'<div class="rank-left">'
+      +'<div class="rank-num">'+num+'</div>'
+      +'<div class="av" style="background:linear-gradient(135deg,'+av[0]+','+av[1]+')">'
+        +ini(r.name)+'</div>'
+      +'<div>'
+      +'<div class="rank-name">'+r.name+' '+grp+'</div>'
+      +'<div class="rank-sub">'+r.days+' day'+(r.days!==1?'s':'')+' · '+r.lastAct+'</div>'
+      +'</div></div>'
+      +'<div class="rank-km">'+r.km.toFixed(1)+' km</div>'
+      +'</div>';
   }).join('');
 }
+
+/* ══ PATCH renderAll to also update entries + rank list + hero-logs ══ */
+var _origRenderAll = window.renderAll;
+window.renderAll = function(rows){
+  _origRenderAll(rows);
+  // Total logs stat
+  var logs = rows.filter(function(r){return r.km>0;}).length;
+  var el = document.getElementById('hero-logs');
+  if(el) el.textContent = logs;
+  // Entries table
+  renderEntries();
+  // Home rank list
+  var totKm={}, totDays={};
+  rows.forEach(function(r){
+    if(!r.name||r.km<=0) return;
+    totKm[r.name]  = (totKm[r.name]||0)+r.km;
+    totDays[r.name]= (totDays[r.name]||0)+1;
+  });
+  var ranked = Object.entries(totKm).map(function(e){
+    var nm=e[0], km=e[1];
+    var lastRow = rows.filter(function(r){return r.name===nm&&r.km>0;}).pop();
+    return {name:nm, km:km, days:totDays[nm]||0, lastAct:(lastRow&&lastRow.act)||'—'};
+  }).sort(function(a,b){return b.km-a.km;});
+  renderHomeRankList(ranked);
+};
 
 </script>
 
-<!-- Theme Toggle -->
-<button class="theme-toggle" id="theme-btn" onclick="toggleTheme()" title="Switch theme" aria-label="Toggle light/dark theme">🌙</button>
-
-<!-- ══ GROUPS PAGE ══ -->
-<div id="pg-groups-page" class="page">
-  <div class="page-inner">
-    <div class="section-hdr">
-      <div class="sec-label">👥 Groups</div>
-    </div>
-    <div id="groups-container"></div>
-  </div>
-</div>
-
-<!-- ══ ALL ENTRIES PAGE ══ -->
-<div id="pg-entries" class="page">
-  <div class="page-inner">
-    <div class="section-hdr">
-      <div class="sec-label">📊 All Entries</div>
-      <div class="sec-sub">Search your day-wise logs</div>
-    </div>
-    <!-- Filter tabs -->
-    <div class="entries-filter-row">
-      <button class="ef-btn active" onclick="filterEntries('all',this)">All</button>
-      <button class="ef-btn" onclick="filterEntries('Walking',this)">🚶 Walk</button>
-      <button class="ef-btn" onclick="filterEntries('Running',this)">🏃 Run</button>
-      <button class="ef-btn" onclick="filterEntries('Cycling',this)">🚴 Cycle</button>
-    </div>
-    <!-- Search -->
-    <div class="entries-search-wrap">
-      <input class="entries-search" id="entries-search" type="text"
-        placeholder="Search your name to see day-wise entries…"
-        oninput="renderEntries()">
-    </div>
-    <!-- Table -->
-    <div class="entries-table-wrap">
-      <table class="entries-table" id="entries-table">
-        <thead>
-          <tr><th>Date</th><th>Name</th><th>Activity</th><th>KM</th><th>Notes</th></tr>
-        </thead>
-        <tbody id="entries-body">
-          <tr><td colspan="5" style="text-align:center;padding:2rem;color:var(--text)">Loading…</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
+<!-- Theme Toggle Button -->
+<button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle light/dark theme">🌙</button>
 
 </body>
 </html>
